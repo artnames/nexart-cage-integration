@@ -1,0 +1,41 @@
+{
+  "step": {
+    "stepId": "e56037c9-52a7-4c86-9e1a-2ef4ac8a67b0",
+    "signals": {
+      "scenario": "happy-path",
+      "sequence": 0,
+      "liveValidation": true
+    },
+    "metadata": {
+      "runId": "22d4f484-4447-4dd5-923b-0a0df6e74995",
+      "source": "nexart-live-cage-validation",
+      "tamperProbe": "ALTERED_AFTER_CERTIFICATION"
+    },
+    "nodeName": "intake",
+    "stateHash": "b7ea27ef4b87a67eb0a851b67c3c211a077c6f7f1fbc73d179a0613bf9ddd588",
+    "durationMs": 10,
+    "timestampUtc": "2026-09-16T09:05:35.536Z",
+    "parentStepIds": []
+  },
+  "schema": {
+    "step": "urn:cage:governance:v1:step-entry",
+    "bundle": "urn:cage:governance:v1:attestation-bundle"
+  },
+  "version": "1",
+  "bundleId": "109b33b3-a485-47e9-a78d-9549ea52cead",
+  "threadId": "live-happy-path-22d4f484-4447-4dd5-923b-0a0df6e74995",
+  "bundleType": "cer.governed.execution.step.v1",
+  "protectedSet": {
+    "protectedSetId": "nexart.governed.execution.step.v1.protected-set.v1",
+    "protectedFields": [
+      "bundleType",
+      "version",
+      "schema",
+      "bundleId",
+      "threadId",
+      "step"
+    ],
+    "stabilitySchemeId": "jcs-v1"
+  },
+  "certificateHash": "sha256:06ecaef10f7da96162f9290b3a863acede905cfe80a15bf35b8f9025c1dca6b8"
+}

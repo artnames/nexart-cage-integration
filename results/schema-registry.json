@@ -1,0 +1,54 @@
+{
+  "test": "schema-registry",
+  "phase": "phase-03b",
+  "status": "PASS",
+  "environment": {
+    "nodeUrl": "https://node.nexart.io",
+    "nodeVersion": "0.28.1"
+  },
+  "cases": [
+    {
+      "case": "missing-schema",
+      "httpStatus": 400,
+      "errorCode": "CAGE_SCHEMA_UNKNOWN",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "unknown-schema-namespace",
+      "httpStatus": 400,
+      "errorCode": "CAGE_SCHEMA_UNKNOWN",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "near-match-invalid-cage-schema",
+      "httpStatus": 400,
+      "errorCode": "CAGE_SCHEMA_UNKNOWN",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "unsupported-future-cage-version",
+      "schema": "urn:cage:governance:v2:attestation-bundle",
+      "httpStatus": 400,
+      "errorCode": "CAGE_SCHEMA_VERSION_UNSUPPORTED",
+      "persisted": false,
+      "status": "PASS"
+    }
+  ],
+  "registryBehavior": {
+    "unknownSchemasFailClosed": true,
+    "unsupportedFutureVersionsFailClosed": true,
+    "fallbackToAnotherEvidenceFamily": false,
+    "status": "PASS"
+  },
+  "persistenceBoundary": {
+    "rejectedRequestsPersisted": 0,
+    "status": "PASS"
+  },
+  "claimBoundary": {
+    "explicitSchemaDispatch": "validated",
+    "futureSchemaCompatibility": "not assumed"
+  }
+}

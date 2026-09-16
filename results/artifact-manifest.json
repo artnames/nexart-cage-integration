@@ -1,0 +1,139 @@
+{
+  "generatedAt": "2026-09-16T13:47:39.127Z",
+  "algorithm": "sha256",
+  "fileCount": 33,
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "8c5b0cf714a338c749497ca05b4a92f3aa749faa120bca2956b8508dd7dc1c12"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "16803de83ab434e9f27c3f81c67e17c6f2ac87a9be79a2b7f37722936d59778b"
+    },
+    {
+      "path": "INTEGRATION.md",
+      "sha256": "0ef444a72fa7e77f874ccbbcb0067e4e20252bba5323c99d3ab908c838f18b98"
+    },
+    {
+      "path": "PRIVACY.md",
+      "sha256": "36548f15ebeab8f4656b6e164467d1f09a0006179a12ed7e011d52b2cde3f923"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d365e1aa24165de8abb0118e22ed8819f238258ba5f2148c00deca01986c81bb"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "316fbb99bd2acae93609cf84fe2e54501d1de9dc966060b252dc87a5baed2165"
+    },
+    {
+      "path": "VERIFICATION.md",
+      "sha256": "8cdfa4a6a614f4743739d484aacda553769e9bc75c61d8ae661d59f03d50f2ff"
+    },
+    {
+      "path": "examples/minimal-integration.mjs",
+      "sha256": "c7bb7382a815dc3e1b9cc539fc983c7b12b0f1c4d19082c9bd23887f546881e5"
+    },
+    {
+      "path": "fixtures/minimal-cage-input.json",
+      "sha256": "cb03c9696f59cdbd97cac8f5a9ec67ed34cf9b772e21e6562db9028671dd2989"
+    },
+    {
+      "path": "fixtures/original-public-cer.json",
+      "sha256": "c897d97973514e89f55ba0d523c1c237c03d592695bcab4073fddff879c4e97a"
+    },
+    {
+      "path": "fixtures/tampered-public-cer.json",
+      "sha256": "d66483da8d3852f7a126dd05aa9a2a84876b502ebe298a71e6a42a837296ed7d"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "e2b3c96bd37ae01ca7f98e226809b99fcace4bc8468615732cb6910595cce610"
+    },
+    {
+      "path": "package.json",
+      "sha256": "4050f770f92844a572f9283d8ad6714ca1b572598f7f414b5025fe5541028a4e"
+    },
+    {
+      "path": "references/README.md",
+      "sha256": "06b4c95f61249aaa1752e9b74f80770195b62adfddc80d211d98494c94743281"
+    },
+    {
+      "path": "results/dag-queries.json",
+      "sha256": "6c0e3e122291b427737472b881e619f3c8a4fbf2d1cfab7621da2b9d9bf798cb"
+    },
+    {
+      "path": "results/fail-closed.json",
+      "sha256": "38a3000fc385e11fcc675922e89b69611680ddba9125b9d488f58c0f0e576ee2"
+    },
+    {
+      "path": "results/idempotency-mutation.json",
+      "sha256": "28fbda30b0957e00f008b34c8a78afe7baa49d98089c1d1d353499d44a6ba889"
+    },
+    {
+      "path": "results/independent-crypto.json",
+      "sha256": "5a3c9a427465e08140ed11ae1f318180adbfdbcb8ac1af78449385b2bb7e1fc6"
+    },
+    {
+      "path": "results/minimal-integration.json",
+      "sha256": "67d21582a45e88d9dbd496cd5ab0c81e548371ae517babd8152edb6f0a234095"
+    },
+    {
+      "path": "results/privacy-commitments.json",
+      "sha256": "5590e6ae587b731a4d71e9d13f693979c93b31aa58c178006dec17a245062d78"
+    },
+    {
+      "path": "results/production-integrity.json",
+      "sha256": "ab46ea34493a7437c67bee3213d5caf42dabc7846e361277b62c01f48ff5e654"
+    },
+    {
+      "path": "results/schema-registry.json",
+      "sha256": "991b935d097719a68d7f732ff1f5be38086d285f4c92c6fbce832831f2149248"
+    },
+    {
+      "path": "results/tamper-artifact.json",
+      "sha256": "7bccb1455c20661a52dc76eca93e206503d3fd6e434ace91ae9b5b75fb5002be"
+    },
+    {
+      "path": "scripts/artifact-manifest.mjs",
+      "sha256": "c28e0d9ee3c7191879472a1a0b3d11efc5bdcebb2809496b36fe276c5601b138"
+    },
+    {
+      "path": "tests/dag-queries.mjs",
+      "sha256": "d7d3f62077ed690b069ca5f5fb9757fa21795895c7bb924029e3d6d1a3eceb17"
+    },
+    {
+      "path": "tests/fail-closed.mjs",
+      "sha256": "1d42b72cfeaff6e2afaebdf736500a14b7fb3ffb517efb4e9ad4e65d9d5f359d"
+    },
+    {
+      "path": "tests/idempotency-mutation.mjs",
+      "sha256": "f29f38d7471754baa7c9ee2740ac0fbe066a71802debedd3efd2dca028e80fb1"
+    },
+    {
+      "path": "tests/independent-crypto.mjs",
+      "sha256": "0b8aa3ae03d26c2a5573e4e80762bdbe4f014e67f136f7b6aac93e7010d96bb7"
+    },
+    {
+      "path": "tests/minimal-integration-validation.mjs",
+      "sha256": "6f8a6a476d1e11371a0e0430347a153c75ac83f26319d1975488d336ab7af626"
+    },
+    {
+      "path": "tests/privacy-commitments.mjs",
+      "sha256": "846664eff557db7ed60a84f0e380035315fece734eee260a2eb94c706aea88f8"
+    },
+    {
+      "path": "tests/production-integrity.mjs",
+      "sha256": "546d123c16e558b1e724940d86f6d2fc45978f89a5aae3c982ba83d2e1323334"
+    },
+    {
+      "path": "tests/schema-registry.mjs",
+      "sha256": "7b464e9551f805c390cad60cb8297aa59ac5bd3bf606c558d13dc68a68e17051"
+    },
+    {
+      "path": "tests/tamper-artifact.mjs",
+      "sha256": "a52a2f77a047ec6ffb2c9ff16d9cb1a6c073cf29433d00c709fe7e1d4349b30d"
+    }
+  ]
+}

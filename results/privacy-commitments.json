@@ -1,0 +1,82 @@
+{
+  "test": "privacy-commitments",
+  "phase": "phase-06",
+  "status": "PASS",
+  "reproduction": {
+    "harness": "tests/privacy-commitments.mjs",
+    "mode": "read-only public evidence validation"
+  },
+  "environment": {
+    "nodeUrl": "https://node.nexart.io",
+    "nodeVersion": "0.28.1",
+    "cerFamily": "cer.governed.execution.step.v1",
+    "cerVersion": "1"
+  },
+  "execution": {
+    "bundleId": "4afbd5e7-0d75-4ea0-9399-53cd574e4867",
+    "threadId": "phase-06-c88f63d9-3cbd-4aff-bc73-e965cc78541d",
+    "stepCount": 2
+  },
+  "privacyTransform": {
+    "performedBeforeCageIngestion": true,
+    "performedBy": "producer",
+    "scheme": "HMAC-SHA-256",
+    "description": "Synthetic sensitive values were transformed into keyed commitments before the native CAGE bundle was submitted.",
+    "nativeCageAutomaticRedactionClaimed": false,
+    "nexartAutomaticRedactionClaimed": false
+  },
+  "syntheticSensitiveValues": {
+    "examples": [
+      "synthetic.user@example.invalid",
+      "SYNTHETIC-CUSTOMER-48291",
+      "synthetic private note"
+    ],
+    "presentInSubmittedPublicEvidence": false,
+    "presentInPublishedCer": false,
+    "status": "PASS"
+  },
+  "secretHandling": {
+    "hmacKeyStoredInEvidence": false,
+    "hmacKeyPrinted": false,
+    "hmacKeyPersistedToResult": false,
+    "status": "PASS"
+  },
+  "visibility": {
+    "initialState": {
+      "publicStep": 404,
+      "siblingStep": 404
+    },
+    "afterSelectivePublication": {
+      "publicStepResolvable": true,
+      "siblingStepStillHidden": true
+    },
+    "status": "PASS"
+  },
+  "publishedStep": {
+    "stepId": "081cb67c-f120-46ee-9ab8-5aa6916e9a19",
+    "certificateHash": "sha256:d3cd87f868f4c4e018d420bef6e9330e4a233b84610474cf716327e0fa495528",
+    "publiclyResolvable": true,
+    "status": "PASS"
+  },
+  "hiddenSibling": {
+    "certificateHash": "sha256:f6e2ad0a3b4b4a3c18e3bd830388bbebf218dfe18ad63bf366245a453820231e",
+    "publiclyResolvable": false,
+    "httpStatus": 404,
+    "status": "PASS"
+  },
+  "commitmentEvidence": {
+    "publicCommitmentsPresent": true,
+    "publicSaltsPresent": true,
+    "plaintextSensitiveValuesPresent": false,
+    "status": "PASS"
+  },
+  "claimBoundary": {
+    "producerSideCommitmentTransformation": "validated",
+    "selectivePublication": "validated",
+    "hiddenSiblingIsolation": "validated",
+    "hmacCommitmentsAreEncryption": false,
+    "plaintextDerivationFromCommitmentClaimed": false,
+    "nativeCageAutomaticPrivacyTransformation": "not claimed",
+    "nexartAutomaticPrivacyTransformation": "not claimed"
+  }
+}

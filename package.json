@@ -1,0 +1,28 @@
+{
+  "name": "nexart-cage-integration",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reference integration and reproducible validation for using NexArt as provider_02 with native CAGE execution schemas.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@nexart/governed-execution": "0.3.0"
+  },
+  "scripts": {
+    "example:minimal": "node examples/minimal-integration.mjs",
+    "test:integrity": "node tests/production-integrity.mjs",
+    "test:dag": "node tests/dag-queries.mjs",
+    "test:fail-closed": "node tests/fail-closed.mjs",
+    "test:schema": "node tests/schema-registry.mjs",
+    "test:idempotency": "node tests/idempotency-mutation.mjs",
+    "test:tamper": "node tests/tamper-artifact.mjs",
+    "test:privacy": "node tests/privacy-commitments.mjs",
+    "test:minimal-recorded": "node tests/minimal-integration-validation.mjs",
+    "test:crypto": "node tests/independent-crypto.mjs",
+    "test:public": "npm run test:privacy && npm run test:crypto",
+    "manifest:generate": "node scripts/artifact-manifest.mjs",
+    "manifest:check": "node scripts/artifact-manifest.mjs --check"
+  }
+}

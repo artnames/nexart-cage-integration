@@ -1,0 +1,80 @@
+{
+  "schema": "urn:cage:governance:v1:attestation-bundle",
+  "bundle": {
+    "bundleId": "7a4042b6-8ff3-4b53-9b7d-bcc5f0d338b9",
+    "threadId": "cage-minimal-example-thread",
+    "steps": [
+      {
+        "stepId": "52c00aa4-9e77-4b6b-997e-3f45c68a95e4",
+        "nodeName": "intake",
+        "parentStepIds": [],
+        "timestampUtc": "2026-09-16T10:00:00.000Z",
+        "durationMs": 10,
+        "signals": {
+          "outcome": "accepted"
+        },
+        "metadata": {
+          "example": "nexart-cage-minimal-integration"
+        },
+        "stateHash": "fb8347152b99c487501e5623b4434864a50bc199b48060d3324d7ed684783745"
+      },
+      {
+        "stepId": "034fa4b8-0f3a-40e0-a516-60437cf4de5e",
+        "nodeName": "decision",
+        "parentStepIds": [
+          "52c00aa4-9e77-4b6b-997e-3f45c68a95e4"
+        ],
+        "timestampUtc": "2026-09-16T10:00:01.000Z",
+        "durationMs": 20,
+        "signals": {
+          "decision": "continue"
+        },
+        "metadata": {
+          "example": "nexart-cage-minimal-integration"
+        },
+        "stateHash": "f2bdc1ed6e4052fe62dd18421e038416e41f1731c7ac44b175cc16e5575a42a9"
+      },
+      {
+        "stepId": "7ac31dd5-935c-4074-810b-2f81fd96cbfa",
+        "nodeName": "complete",
+        "parentStepIds": [
+          "034fa4b8-0f3a-40e0-a516-60437cf4de5e"
+        ],
+        "timestampUtc": "2026-09-16T10:00:02.000Z",
+        "durationMs": 5,
+        "signals": {
+          "outcome": "completed"
+        },
+        "metadata": {
+          "example": "nexart-cage-minimal-integration"
+        },
+        "stateHash": "f5e1acb72c8a0e136be3dee7c9091dd0d967ea09d19691bd2416fcda1af2fd28"
+      }
+    ],
+    "startedAt": "2026-09-16T10:00:00.000Z",
+    "completedAt": "2026-09-16T10:00:03.000Z",
+    "terminalPath": "happy_path"
+  },
+  "topology": {
+    "nodes": [
+      "intake",
+      "decision",
+      "complete"
+    ],
+    "parentEdges": {
+      "intake": [],
+      "decision": [
+        "intake"
+      ],
+      "complete": [
+        "decision"
+      ]
+    },
+    "terminalNode": "complete",
+    "attestationNodes": [
+      "intake",
+      "decision",
+      "complete"
+    ]
+  }
+}

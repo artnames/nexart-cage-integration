@@ -1,0 +1,106 @@
+{
+  "test": "dag-queries",
+  "phase": "phase-02",
+  "status": "PASS",
+  "environment": {
+    "nodeUrl": "https://node.nexart.io",
+    "nodeVersion": "0.28.1",
+    "cerFamily": "cer.governed.execution.step.v1",
+    "cerVersion": "1"
+  },
+  "authentication": {
+    "authenticatedQueries": "PASS",
+    "unauthenticatedQueryHttpStatus": 401,
+    "unauthenticatedQueriesRejected": true
+  },
+  "scenarios": [
+    {
+      "name": "happy-path",
+      "bundleId": "109b33b3-a485-47e9-a78d-9549ea52cead",
+      "stepCount": 4,
+      "checks": {
+        "parents": "PASS",
+        "children": "PASS",
+        "ancestors": "PASS",
+        "descendants": "PASS",
+        "path": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "loop-breaker",
+      "bundleId": "87492823-96df-4545-8312-f5eb5f491891",
+      "stepCount": 6,
+      "logicalNodeExecutions": {
+        "planner": 3,
+        "executor": 2
+      },
+      "uniqueStepIds": 6,
+      "checks": {
+        "repeatedNodeNamesPreservedAsDistinctStepInstances": "PASS",
+        "parentRelationships": "PASS",
+        "traversal": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "branching-merging-dag",
+      "bundleId": "fec228f8-5259-47e9-9339-c9d137576898",
+      "stepCount": 22,
+      "checks": {
+        "rootFanout": {
+          "expectedChildren": 3,
+          "actualChildren": 3,
+          "status": "PASS"
+        },
+        "merge1": {
+          "expectedParents": 3,
+          "actualParents": 3,
+          "expectedChildren": 3,
+          "actualChildren": 3,
+          "status": "PASS"
+        },
+        "merge2": {
+          "expectedParents": 3,
+          "actualParents": 3,
+          "status": "PASS"
+        },
+        "completeAncestors": {
+          "expected": 21,
+          "actual": 21,
+          "status": "PASS"
+        },
+        "rootDescendants": {
+          "expected": 21,
+          "actual": 21,
+          "status": "PASS"
+        },
+        "merge2ToCompletePath": {
+          "expectedNodeCount": 5,
+          "actualNodeCount": 5,
+          "status": "PASS"
+        }
+      },
+      "status": "PASS"
+    }
+  ],
+  "validatedOperations": {
+    "parents": "PASS",
+    "children": "PASS",
+    "ancestors": "PASS",
+    "descendants": "PASS",
+    "path": "PASS"
+  },
+  "executionModel": {
+    "relationshipIdentity": "stepId",
+    "logicalNodeIdentity": "nodeName",
+    "loopsRepresentedByRepeatedNodeNameWithUniqueStepId": true,
+    "observedExecutionRemainedAcyclic": true
+  },
+  "claimBoundary": {
+    "persistedExecutedStepRelationships": "validated",
+    "dagTraversalQueries": "validated",
+    "executionTruth": "not claimed",
+    "producerCompleteness": "not claimed"
+  }
+}
