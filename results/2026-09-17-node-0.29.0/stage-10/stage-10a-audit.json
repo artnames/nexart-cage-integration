@@ -1,0 +1,151 @@
+{
+  "stage": "10a-consolidation-preflight",
+  "networkCalls": 0,
+  "productionCalls": 0,
+  "apiKeyRequired": false,
+  "baseline": {
+    "canonicalNode": "0.29.0",
+    "governedExecutionSdk": "0.4.0",
+    "cageRepository": "google/cybernetic-agent-governance-engine",
+    "cagePinnedCommit": "8162958ac23d958871fd4016f349a7062627fd4d"
+  },
+  "stages": [
+    {
+      "stage": "stage-01",
+      "directoryExists": true,
+      "summary": "results/2026-09-17-node-0.29.0/stage-01/stage-01-summary.json",
+      "summarySha256": "863a1e50017ef76a6688876086d3dd3d175c52fa1cca454a346d2f26c677920f",
+      "status": "PASS",
+      "readme": false,
+      "manifest": false,
+      "observedControlFields": {}
+    },
+    {
+      "stage": "stage-02",
+      "directoryExists": true,
+      "summary": "results/2026-09-17-node-0.29.0/stage-02/stage-02-final-summary.json",
+      "summarySha256": "da1ca4615f4ccc1ab25273d1406726f255be5237549b83276c317881cab076d3",
+      "status": "PASS",
+      "readme": true,
+      "manifest": true,
+      "observedControlFields": {
+        "independentReadBackVerification.verifiedCerCount": 38,
+        "independentReadBackVerification.uniqueCertificateHashes": 38
+      }
+    },
+    {
+      "stage": "stage-03",
+      "directoryExists": true,
+      "summary": "results/2026-09-17-node-0.29.0/stage-03/stage-03-final-summary.json",
+      "summarySha256": "5f03a98d98f1ec348f21f950f591efc2a46686c85e33701f7ad6d2ae8fa7833a",
+      "status": "PASS",
+      "readme": true,
+      "manifest": true,
+      "observedControlFields": {
+        "productionValidation.verifiedCerCount": 8,
+        "productionValidation.uniqueCertificateHashes": 8
+      }
+    },
+    {
+      "stage": "stage-04",
+      "directoryExists": true,
+      "summary": "results/2026-09-17-node-0.29.0/stage-04/stage-04-final-summary.json",
+      "summarySha256": "ef65b5fc60b16eabba076d4c0214ce9e2d3eb491a688c9eb4a4c96ec364bec81",
+      "status": "PASS",
+      "readme": true,
+      "manifest": true,
+      "observedControlFields": {
+        "productionValidation.verifiedCerCount": 8,
+        "productionValidation.uniqueCertificateHashes": 8
+      }
+    },
+    {
+      "stage": "stage-05",
+      "directoryExists": true,
+      "summary": "results/2026-09-17-node-0.29.0/stage-05/stage-05-final-summary.json",
+      "summarySha256": "9fd843a7fd955ce5e9252c28d98aae0706b227676d41db545e95c5dd2cfd0ffa",
+      "status": "PASS",
+      "readme": true,
+      "manifest": true,
+      "observedControlFields": {
+        "productionValidation.verifiedCerCount": 13,
+        "productionValidation.uniqueCertificateHashes": 13
+      }
+    },
+    {
+      "stage": "stage-06",
+      "directoryExists": true,
+      "summary": "results/2026-09-17-node-0.29.0/stage-06/stage-06-final-summary.json",
+      "summarySha256": "f93d51527e31f2b028979df6ea70634211328f20ce515fe617e6e6410ee9d04a",
+      "status": "PASS",
+      "readme": true,
+      "manifest": true,
+      "observedControlFields": {}
+    },
+    {
+      "stage": "stage-07",
+      "directoryExists": true,
+      "summary": "results/2026-09-17-node-0.29.0/stage-07/stage-07-final-summary.json",
+      "summarySha256": "f0266c9227bbdffa46c0c0e5d0f71747a97717453134bf542035e91cd88f753f",
+      "status": "PASS",
+      "readme": true,
+      "manifest": true,
+      "observedControlFields": {
+        "production.verifiedCerCount": 4,
+        "production.uniqueCertificateHashes": 4,
+        "replay.replayed": true
+      }
+    },
+    {
+      "stage": "stage-08",
+      "directoryExists": true,
+      "summary": "results/2026-09-17-node-0.29.0/stage-08/stage-08-final-summary.json",
+      "summarySha256": "f3ce9c36c6bc59459bb009f2f444a250c06a5a7e47288ccee5eb832caa571c36",
+      "status": "PASS",
+      "readme": true,
+      "manifest": true,
+      "observedControlFields": {
+        "productionWrites": 0,
+        "evidence.uniqueCertificateHashes": 4
+      }
+    },
+    {
+      "stage": "stage-09",
+      "directoryExists": true,
+      "summary": "results/2026-09-17-node-0.29.0/stage-09/stage-09-final-summary.json",
+      "summarySha256": "086a2b26f708cdd6c93e34efbc1dd7dc017db2613db6739f281c5f3feac57a7d",
+      "status": "PASS",
+      "readme": true,
+      "manifest": true,
+      "observedControlFields": {
+        "stage09A.productionWrites": 0,
+        "stage09B.authorizedPostCount": 1,
+        "stage09B.executedPostCount": 1,
+        "stage09B.preflightHttpStatus": 404,
+        "stage09B.submissionHttpStatus": 201,
+        "stage09B.replayed": false,
+        "stage09B.verifiedCerCount": 4,
+        "stage09B.uniqueCertificateHashes": 4
+      }
+    }
+  ],
+  "stage9ProductionIdentity": {
+    "fixtureExists": true,
+    "fixtureSha256": "698bcaf82901c9b33676d88433cc72dbbdb0f2578efa8fa9ef802a25a6904bd9",
+    "bundleId": "613702d8-fdc0-40bc-9723-c21111c216db",
+    "threadId": "stage09-real-adapter-cbf",
+    "terminalPath": "cbf_block",
+    "stepCount": 4
+  },
+  "secretScan": {
+    "hitCount": 0,
+    "files": []
+  },
+  "warnings": [
+    "stage-01: README.md missing",
+    "stage-01: artifact-manifest.json missing"
+  ],
+  "hardFailures": [],
+  "readyForFinalConformanceGeneration": true,
+  "status": "PASS"
+}

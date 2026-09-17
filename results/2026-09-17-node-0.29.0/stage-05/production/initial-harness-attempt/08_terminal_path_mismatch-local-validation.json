@@ -1,0 +1,14 @@
+{
+  "schemaErrors": [],
+  "causalErrors": [],
+  "topologyErrors": [
+    {
+      "code": "TERMINAL_PATH_MISMATCH",
+      "path": "bundle.terminalPath",
+      "message": "submitted terminal path happy_path does not match derived terminal path cbf_block"
+    }
+  ],
+  "resourceErrors": [],
+  "warnings": [],
+  "valid": false
+}

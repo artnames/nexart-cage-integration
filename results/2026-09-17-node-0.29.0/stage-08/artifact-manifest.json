@@ -1,0 +1,36 @@
+{
+  "algorithm": "sha256",
+  "artifactCount": 6,
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "491bde7071c5a93c83993e38ee52b2bfd8d5b2597139d5511eb46979f78617a2",
+      "bytes": 1860
+    },
+    {
+      "path": "harnesses/stage-08-crypto-tamper-validation.mjs",
+      "sha256": "bc4bbae92caaba299b0937fb8f07979fdb8cbf31a3a9ebb850a4120a0441a04a",
+      "bytes": 22620
+    },
+    {
+      "path": "node-discovery.json",
+      "sha256": "e3789957b6ee928d45252403536a2d95393e9bfcc7aa3ab32e65896aabf4697f",
+      "bytes": 713
+    },
+    {
+      "path": "stage-08-final-summary.json",
+      "sha256": "f3ce9c36c6bc59459bb009f2f444a250c06a5a7e47288ccee5eb832caa571c36",
+      "bytes": 14823
+    },
+    {
+      "path": "stage-08-summary.json",
+      "sha256": "f3ce9c36c6bc59459bb009f2f444a250c06a5a7e47288ccee5eb832caa571c36",
+      "bytes": 14823
+    },
+    {
+      "path": "stage-08-tamper-results.json",
+      "sha256": "54c4ff41efae9ba95994c6e0a073f878dca518ac69b4d32de36c5d5e56303cc0",
+      "bytes": 8983
+    }
+  ]
+}

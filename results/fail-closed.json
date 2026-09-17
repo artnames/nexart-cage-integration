@@ -1,0 +1,130 @@
+{
+  "test": "fail-closed",
+  "phase": "phase-03",
+  "status": "PASS",
+  "recordType": "curated-historical-acceptance-summary",
+  "publicationAudit": {
+    "date": "2026-09-16",
+    "harnessInspected": true,
+    "productionRequestsRerun": false
+  },
+  "environment": {
+    "nodeUrl": "https://node.nexart.io",
+    "nodeVersion": "0.28.1",
+    "sdkPackage": "@nexart/governed-execution",
+    "sdkVersion": "0.3.0"
+  },
+  "invalidFixtureCount": 11,
+  "fixtures": [
+    {
+      "case": "invalid-step-id-uuid",
+      "sdkRejected": true,
+      "nodeHttpStatus": 422,
+      "nodeErrorCode": "CAGE_VALIDATION_FAILED",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "invalid-state-hash",
+      "sdkRejected": true,
+      "nodeHttpStatus": 422,
+      "nodeErrorCode": "CAGE_VALIDATION_FAILED",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "duplicate-step-id",
+      "sdkRejected": true,
+      "nodeHttpStatus": 422,
+      "nodeErrorCode": "CAGE_VALIDATION_FAILED",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "missing-parent-reference",
+      "sdkRejected": true,
+      "nodeHttpStatus": 422,
+      "nodeErrorCode": "CAGE_VALIDATION_FAILED",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "self-parent-reference",
+      "sdkRejected": true,
+      "nodeHttpStatus": 422,
+      "nodeErrorCode": "CAGE_VALIDATION_FAILED",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "executed-cycle",
+      "sdkRejected": true,
+      "nodeHttpStatus": 422,
+      "nodeErrorCode": "CAGE_VALIDATION_FAILED",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "invalid-terminal-path",
+      "sdkRejected": true,
+      "nodeHttpStatus": 422,
+      "nodeErrorCode": "CAGE_VALIDATION_FAILED",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "invalid-bundle-id-uuid",
+      "sdkRejected": true,
+      "nodeHttpStatus": 422,
+      "nodeErrorCode": "CAGE_VALIDATION_FAILED",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "topology-terminal-node-missing",
+      "sdkRejected": true,
+      "nodeHttpStatus": 422,
+      "nodeErrorCode": "CAGE_VALIDATION_FAILED",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "topology-parent-ghost-node",
+      "sdkRejected": true,
+      "nodeHttpStatus": 422,
+      "nodeErrorCode": "CAGE_VALIDATION_FAILED",
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "case": "executed-node-absent-from-topology",
+      "sdkRejected": true,
+      "nodeHttpStatus": 422,
+      "nodeErrorCode": "CAGE_VALIDATION_FAILED",
+      "persisted": false,
+      "status": "PASS"
+    }
+  ],
+  "authenticationChecks": {
+    "validRequestWithoutApiKey": {
+      "httpStatus": 401,
+      "persisted": false,
+      "status": "PASS"
+    }
+  },
+  "transportChecks": {
+    "malformedJson": {
+      "httpStatus": 400,
+      "status": "PASS"
+    }
+  },
+  "persistenceBoundary": {
+    "invalidRequestsPersisted": 0,
+    "status": "PASS"
+  },
+  "claimBoundary": {
+    "invalidNativeCageEvidenceRejected": "validated",
+    "invalidEvidencePersistencePrevented": "validated",
+    "executionTruth": "not claimed"
+  }
+}

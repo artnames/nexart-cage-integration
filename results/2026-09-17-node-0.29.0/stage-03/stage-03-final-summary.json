@@ -1,0 +1,98 @@
+{
+  "stage": "03-ancestor-contraction-repeated-nodes-convergent-dag",
+  "status": "PASS",
+  "generatedAt": "2026-09-17T11:41:48.177343Z",
+  "baseline": {
+    "governedExecutionSdk": "0.4.0",
+    "canonicalNode": "0.29.0",
+    "schema": "urn:cage:governance:v1:attestation-bundle"
+  },
+  "localValidation": {
+    "fixtureCount": 3,
+    "status": "PASS",
+    "allSdkValid": true,
+    "allCersVerify": true
+  },
+  "productionValidation": {
+    "bundleCount": 3,
+    "expectedCerCount": 8,
+    "verifiedCerCount": 8,
+    "uniqueCertificateHashes": 8,
+    "status": "PASS"
+  },
+  "semanticResults": {
+    "ancestorContraction": "PASS",
+    "convergentMultiParentDag": "PASS",
+    "repeatedNodeOccurrences": "PASS"
+  },
+  "fixtureHashes": {
+    "01_ancestor_contraction_linear.json": "c6b7cf67372d56e981341c1e8f47fd3dba30a26cc2175cc64d4ef6c5fa9cb20a",
+    "02_convergent_contraction.json": "0a1a948136bafaacc2917b5cde6f7d132f35cdc384cc66d338a0f5a682297310",
+    "03_repeated_node_occurrences.json": "8e3e24a5861b45de7452aa262f5e1b5803158c385c9739fcd9f4cc7c3c395e16"
+  },
+  "productionBundleIds": [
+    "30000000-0000-4000-8000-000000000001",
+    "30000000-0000-4000-8000-000000000002",
+    "30000000-0000-4000-8000-000000000003"
+  ],
+  "semanticChecks": [
+    {
+      "label": "linear-contraction-leaf",
+      "stepId": "30000001-0000-4000-8000-000000000002",
+      "expectedParentStepIds": [
+        "30000001-0000-4000-8000-000000000001"
+      ],
+      "actualParentStepIds": [
+        "30000001-0000-4000-8000-000000000001"
+      ],
+      "status": "PASS"
+    },
+    {
+      "label": "convergent-contraction-join",
+      "stepId": "30000002-0000-4000-8000-000000000003",
+      "expectedParentStepIds": [
+        "30000002-0000-4000-8000-000000000001",
+        "30000002-0000-4000-8000-000000000002"
+      ],
+      "actualParentStepIds": [
+        "30000002-0000-4000-8000-000000000001",
+        "30000002-0000-4000-8000-000000000002"
+      ],
+      "status": "PASS"
+    },
+    {
+      "label": "repeated-node-step-2",
+      "stepId": "30000003-0000-4000-8000-000000000002",
+      "expectedParentStepIds": [
+        "30000003-0000-4000-8000-000000000001"
+      ],
+      "actualParentStepIds": [
+        "30000003-0000-4000-8000-000000000001"
+      ],
+      "status": "PASS"
+    },
+    {
+      "label": "repeated-node-step-3",
+      "stepId": "30000003-0000-4000-8000-000000000003",
+      "expectedParentStepIds": [
+        "30000003-0000-4000-8000-000000000002"
+      ],
+      "actualParentStepIds": [
+        "30000003-0000-4000-8000-000000000002"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "harnessNotes": {
+    "initialProductionAttempt": "did not execute because the harness was located under /tmp and Node ESM could not resolve the repository dependency",
+    "productionWritesDuringFailedAttempt": false,
+    "resolution": "harness executed from repository tests directory with the same source bytes; production preflight then confirmed all three bundle IDs were absent before submission"
+  },
+  "claimBoundary": {
+    "ancestorContraction": "validated against explicit topology and concrete parentStepIds",
+    "repeatedNodeIdentity": "validated using distinct concrete stepIds sharing the same nodeName",
+    "stateHash": "preserved and certificate-bound; private preimage not verified",
+    "cageProducerAuthentication": "not claimed",
+    "executionTruth": "not claimed"
+  }
+}

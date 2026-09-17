@@ -1,0 +1,104 @@
+{
+  "stage": "06b-production-structural-fail-closed",
+  "generatedAt": "2026-09-17T12:18:49.481Z",
+  "baseline": {
+    "governedExecutionSdk": "0.4.0",
+    "canonicalNode": "0.29.0",
+    "schema": "urn:cage:governance:v1:attestation-bundle"
+  },
+  "productionWriteAuthorized": true,
+  "authorizedRequestCount": 4,
+  "requestCount": 4,
+  "rejectedRequestCount": 4,
+  "persistedBundleCount": 0,
+  "expectedPersistedBundleCount": 0,
+  "expectedCerCount": 0,
+  "cases": [
+    {
+      "fixture": "01_missing_parent.json",
+      "bundleId": "60000000-0000-4000-8000-000000000001",
+      "httpStatus": 422,
+      "error": "CAGE_VALIDATION_FAILED",
+      "reasonCode": "MISSING_PARENT",
+      "requiredIssueCode": "MISSING_PARENT",
+      "issuePath": "bundle.steps[1].parentStepIds",
+      "issueCodes": [
+        "MISSING_PARENT"
+      ],
+      "bundleReadAfterRejection": 404,
+      "stepsReadAfterRejection": 404,
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "fixture": "05_unknown_node.json",
+      "bundleId": "60000000-0000-4000-8000-000000000005",
+      "httpStatus": 422,
+      "error": "CAGE_VALIDATION_FAILED",
+      "reasonCode": "UNKNOWN_NODE",
+      "requiredIssueCode": "UNKNOWN_NODE",
+      "issuePath": "bundle.steps[1].nodeName",
+      "issueCodes": [
+        "UNKNOWN_NODE",
+        "ILLEGAL_EXECUTED_EDGE",
+        "ILLEGAL_EXECUTED_EDGE",
+        "MISSING_CONTRACTED_PARENT"
+      ],
+      "bundleReadAfterRejection": 404,
+      "stepsReadAfterRejection": 404,
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "fixture": "06_invalid_step_uuid.json",
+      "bundleId": "60000000-0000-4000-8000-000000000006",
+      "httpStatus": 422,
+      "error": "CAGE_VALIDATION_FAILED",
+      "reasonCode": "INVALID_UUID",
+      "requiredIssueCode": "INVALID_UUID",
+      "issuePath": "bundle.steps[3].stepId",
+      "issueCodes": [
+        "INVALID_UUID"
+      ],
+      "bundleReadAfterRejection": 404,
+      "stepsReadAfterRejection": 404,
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "fixture": "07_invalid_parent_uuid.json",
+      "bundleId": "60000000-0000-4000-8000-000000000007",
+      "httpStatus": 422,
+      "error": "CAGE_VALIDATION_FAILED",
+      "reasonCode": "INVALID_PARENT_IDS",
+      "requiredIssueCode": "INVALID_PARENT_IDS",
+      "issuePath": "bundle.steps[1].parentStepIds",
+      "issueCodes": [
+        "INVALID_PARENT_IDS"
+      ],
+      "bundleReadAfterRejection": 404,
+      "stepsReadAfterRejection": 404,
+      "persisted": false,
+      "status": "PASS"
+    }
+  ],
+  "fixtureHashes": {
+    "01_missing_parent.json": "31a7d2f54d7df75523c6fb49cabfb2b67ca0fc4816aa3c2fe0bc8b90e9d8ec08",
+    "05_unknown_node.json": "bdcde410509610e493fa505387db53031d827497335fba98a97c3181906dff45",
+    "06_invalid_step_uuid.json": "d1e63c900a2146b196fe1dcc8d6b0c3791f4f6476011fc606196ed4a5c889603",
+    "07_invalid_parent_uuid.json": "e80f4be744e6d83b278adcc457904953e2651a06f0e32c2086a5fdfe9ec1ce06"
+  },
+  "conclusions": {
+    "missingParent": "rejected before persistence",
+    "unknownNode": "rejected before persistence",
+    "invalidStepUuid": "rejected before persistence",
+    "invalidParentUuid": "rejected before persistence"
+  },
+  "claimBoundary": {
+    "structuralValidation": "validated fail-closed at the production Node boundary",
+    "rejectedEvidencePersistence": "no rejected bundle or step collection was persisted",
+    "executionTruth": "not claimed",
+    "cageProducerAuthentication": "not claimed"
+  },
+  "status": "PASS"
+}

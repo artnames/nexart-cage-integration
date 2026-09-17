@@ -1,0 +1,30 @@
+{
+  "warning": "Diagnostic derivative only. Not CAGE-authored evidence and not eligible for production submission.",
+  "purpose": "Isolate the topology incompatibility after the raw CAGE HITL bundle failed earlier on INVALID_STATE_HASH.",
+  "modifiedField": "bundle.steps[3].stateHash",
+  "report": {
+    "schemaErrors": [],
+    "causalErrors": [],
+    "topologyErrors": [
+      {
+        "code": "UNKNOWN_NODE",
+        "path": "bundle.steps[3].nodeName",
+        "message": "nodeName is not declared by topology"
+      },
+      {
+        "code": "ILLEGAL_EXECUTED_EDGE",
+        "path": "bundle.steps[c565f171-0adf-4dc0-9bbf-03ae80592b47].parentStepIds",
+        "message": "child step c565f171-0adf-4dc0-9bbf-03ae80592b47 (hitl_interrupt) has parent step 51d8b4ee-2aa0-4b25-a574-6dd0bb0c9531 (safety_check) not selected by ancestor contraction; expected []"
+      }
+    ],
+    "resourceErrors": [],
+    "warnings": [
+      {
+        "code": "CAGE_TERMINAL_PATH_UNKNOWN",
+        "path": "bundle.terminalPath",
+        "message": "terminal path is unknown and is not governance approval"
+      }
+    ],
+    "valid": false
+  }
+}

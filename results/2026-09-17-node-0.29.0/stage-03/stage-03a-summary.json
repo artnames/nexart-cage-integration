@@ -1,0 +1,55 @@
+{
+  "stage": "03a-local-contraction-repetition-convergence",
+  "sdk": "0.4.0",
+  "fixtures": [
+    {
+      "fixture": "01_ancestor_contraction_linear",
+      "bundleId": "30000000-0000-4000-8000-000000000001",
+      "stepCount": 2,
+      "validation": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": true
+      },
+      "sealedRecordCount": 2,
+      "allCersVerify": true,
+      "status": "PASS"
+    },
+    {
+      "fixture": "02_convergent_contraction",
+      "bundleId": "30000000-0000-4000-8000-000000000002",
+      "stepCount": 3,
+      "validation": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": true
+      },
+      "sealedRecordCount": 3,
+      "allCersVerify": true,
+      "status": "PASS"
+    },
+    {
+      "fixture": "03_repeated_node_occurrences",
+      "bundleId": "30000000-0000-4000-8000-000000000003",
+      "stepCount": 3,
+      "validation": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": true
+      },
+      "sealedRecordCount": 3,
+      "allCersVerify": true,
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

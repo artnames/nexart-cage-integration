@@ -1,0 +1,67 @@
+{
+  "stage": "01-production-baseline-and-key-continuity",
+  "status": "PASS",
+  "generatedAt": "2026-09-17T11:09:58.902155Z",
+  "validationBaseline": {
+    "cageCommit": "8162958ac23d958871fd4016f349a7062627fd4d",
+    "governedExecutionSdk": "0.4.0",
+    "canonicalNode": "0.29.0"
+  },
+  "productionNode": {
+    "nodeId": "nexart-node-prod-1",
+    "status": "ok",
+    "version": "0.29.0",
+    "protocolDefault": "1.3.1",
+    "protocolSupported": [
+      "1.2.0",
+      "1.3.1"
+    ]
+  },
+  "signingKey": {
+    "kid": "k1",
+    "algorithm": "Ed25519",
+    "publicKey": "30ROjmcwj5oowj_fflAqdyacB0ik7eEnndzNKJmy9uU",
+    "revoked": false,
+    "publicKeyStableAcrossReads": true,
+    "observedPublicKeys": [
+      "30ROjmcwj5oowj_fflAqdyacB0ik7eEnndzNKJmy9uU"
+    ]
+  },
+  "discoveryMetadata": {
+    "createdAtValuesObserved": [
+      "2026-09-17T10:46:20.880Z",
+      "2026-09-17T10:46:20.898Z"
+    ],
+    "validFromValuesObserved": [
+      "2026-09-17T10:46:20.880Z",
+      "2026-09-17T10:46:20.898Z"
+    ],
+    "stable": false,
+    "finding": "NON_BLOCKING_METADATA_VARIANCE"
+  },
+  "independentCrypto": {
+    "harness": "tests/independent-crypto.mjs",
+    "exitCode": 0,
+    "sdkRequired": false,
+    "certificateIntegrity": "PASS",
+    "nodeAttestationSignature": "PASS",
+    "alteredProtectedContentRejected": true,
+    "alteredSignedPayloadRejected": true,
+    "modifiedSignatureRejected": true,
+    "unrelatedKeyRejected": true
+  },
+  "claimBoundary": {
+    "certificateIntegrity": "independently validated",
+    "nodeAttestationAuthenticity": "independently validated",
+    "cageProducerAuthentication": "not claimed",
+    "stateHashPreimage": "not independently verified",
+    "executionTruth": "not claimed"
+  },
+  "artifactSha256": {
+    "nodeStatus": "42dcdae6d55a75be4aa647395da7d4af855e7112b03230ade07f83c7cb9f3219",
+    "nodeDiscovery": "e77d951d2633e43b5f9b741c5add8b9152d3a1b31cfed8fd1337aeea4b7e8043",
+    "discoveryStability": "0f863b4b52e6112facff9098b3864aa6e8ae4dbe2cdd62b9a4d0229613c0be24",
+    "independentCryptoTranscript": "fb4ae2bf268315a76c448f6568b008c302d2a2b438cca3b400b30250b2a87b86",
+    "historicalCryptoResult": "c3c27c611e2f0473e96dccdc7d495af553897f04fd6709577de7376d12164bd2"
+  }
+}

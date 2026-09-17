@@ -1,0 +1,118 @@
+{
+  "stage": "04a-local-static-vs-concrete-cycle-semantics",
+  "sdk": "0.4.0",
+  "cases": [
+    {
+      "name": "01_static_self_edge_allowed",
+      "expectation": "ACCEPT",
+      "valid": true,
+      "issueCodes": [],
+      "requiredCodes": [],
+      "sealedRecordCount": 4,
+      "allCersVerify": true,
+      "report": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "02_static_mutual_cycle_allowed",
+      "expectation": "ACCEPT",
+      "valid": true,
+      "issueCodes": [],
+      "requiredCodes": [],
+      "sealedRecordCount": 4,
+      "allCersVerify": true,
+      "report": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "03_concrete_cycle_rejected",
+      "expectation": "REJECT",
+      "valid": false,
+      "issueCodes": [
+        "CAUSAL_CYCLE",
+        "FUTURE_PARENT",
+        "TIMESTAMP_INVERSION"
+      ],
+      "requiredCodes": [
+        "FUTURE_PARENT",
+        "CAUSAL_CYCLE"
+      ],
+      "sealedRecordCount": null,
+      "allCersVerify": null,
+      "report": {
+        "schemaErrors": [],
+        "causalErrors": [
+          {
+            "code": "FUTURE_PARENT",
+            "path": "bundle.steps[0].parentStepIds",
+            "message": "parent must appear before child"
+          },
+          {
+            "code": "TIMESTAMP_INVERSION",
+            "path": "bundle.steps[0].timestampUtc",
+            "message": "parent timestamp must be at or before child timestamp"
+          },
+          {
+            "code": "CAUSAL_CYCLE",
+            "path": "bundle.steps",
+            "message": "cycle includes 00000001-0000-4000-8000-000000000001"
+          }
+        ],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": false
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "04_unresolvable_contraction_cycle_rejected",
+      "expectation": "REJECT",
+      "valid": false,
+      "issueCodes": [
+        "ILLEGAL_EXECUTED_EDGE",
+        "UNRESOLVABLE_CONTRACTION_CYCLE"
+      ],
+      "requiredCodes": [
+        "UNRESOLVABLE_CONTRACTION_CYCLE"
+      ],
+      "sealedRecordCount": null,
+      "allCersVerify": null,
+      "report": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [
+          {
+            "code": "UNRESOLVABLE_CONTRACTION_CYCLE",
+            "path": "bundle.steps[40000004-0000-4000-8000-000000000002].parentStepIds",
+            "message": "cannot contract topology parents for step 40000004-0000-4000-8000-000000000002 (leaf): unrecorded cycle includes omitted_a"
+          },
+          {
+            "code": "ILLEGAL_EXECUTED_EDGE",
+            "path": "bundle.steps[40000004-0000-4000-8000-000000000002].parentStepIds",
+            "message": "child step 40000004-0000-4000-8000-000000000002 (leaf) has parent step 40000004-0000-4000-8000-000000000001 (root) not selected by ancestor contraction; expected []"
+          }
+        ],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": false
+      },
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

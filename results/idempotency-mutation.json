@@ -1,0 +1,82 @@
+{
+  "test": "idempotency-mutation",
+  "phase": "phase-04",
+  "status": "PASS",
+  "recordType": "curated-historical-acceptance-summary",
+  "publicationAudit": {
+    "date": "2026-09-16",
+    "historicalAcceptanceCrossChecked": true,
+    "evidenceCreatingHarnessRerun": false
+  },
+  "environment": {
+    "nodeUrl": "https://node.nexart.io",
+    "nodeVersion": "0.28.1",
+    "cerFamily": "cer.governed.execution.step.v1",
+    "cerVersion": "1"
+  },
+  "execution": {
+    "bundleId": "394526db-d885-4fd0-abc0-a1fd156a7a8b",
+    "stepCount": 3
+  },
+  "initialRegistration": {
+    "httpStatus": 201,
+    "replayed": false,
+    "cerCount": 3,
+    "certificateHashesUnique": true,
+    "proofStatus": "ATTESTED",
+    "usageEventsCreated": true,
+    "status": "PASS"
+  },
+  "exactReplay": {
+    "httpStatus": 200,
+    "replayed": true,
+    "sameCertificateHashes": true,
+    "sameProofIds": true,
+    "sameAttestationIds": true,
+    "sameUsageEventIds": true,
+    "sameProofJson": true,
+    "replacementProofsCreated": false,
+    "status": "PASS"
+  },
+  "metadataMutation": {
+    "mutationWasSchemaValid": true,
+    "httpStatus": 409,
+    "errorCode": "EXECUTION_MUTATION_DETECTED",
+    "originalEvidenceChanged": false,
+    "status": "PASS"
+  },
+  "threadIdMutation": {
+    "mutationWasSchemaValid": true,
+    "httpStatus": 409,
+    "errorCode": "EXECUTION_MUTATION_DETECTED",
+    "originalEvidenceChanged": false,
+    "status": "PASS"
+  },
+  "finalReplay": {
+    "httpStatus": 200,
+    "replayed": true,
+    "sameOriginalCertificateHashes": true,
+    "sameOriginalProofIds": true,
+    "sameOriginalAttestationIds": true,
+    "sameOriginalUsageEventIds": true,
+    "status": "PASS"
+  },
+  "identityModel": {
+    "components": [
+      "authenticated tenant",
+      "schema namespace/version",
+      "bundleId"
+    ]
+  },
+  "billingEvidenceBoundary": {
+    "proofLinkedUsageEventIdsUnchangedOnReplay": true,
+    "globalBillingCounterDeltaDirectlyMeasured": false,
+    "note": "The test established reuse of the original proof-linked usage event identities. It did not independently measure a global billing counter delta."
+  },
+  "claimBoundary": {
+    "exactReplayIdempotency": "validated",
+    "schemaValidMutationDetection": "validated",
+    "originalEvidencePreservation": "validated",
+    "globalBillingCounterDelta": "not directly measured"
+  }
+}

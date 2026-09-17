@@ -1,0 +1,75 @@
+{
+  "stage": "04-static-topology-cycles-vs-concrete-execution-cycles",
+  "status": "PASS",
+  "generatedAt": "2026-09-17T11:51:30.132621Z",
+  "baseline": {
+    "governedExecutionSdk": "0.4.0",
+    "canonicalNode": "0.29.0",
+    "schema": "urn:cage:governance:v1:attestation-bundle"
+  },
+  "localValidation": {
+    "caseCount": 4,
+    "status": "PASS",
+    "allCasesPassed": true
+  },
+  "productionValidation": {
+    "requestCount": 4,
+    "acceptedBundles": 2,
+    "rejectedRequests": 2,
+    "verifiedCerCount": 8,
+    "uniqueCertificateHashes": 8,
+    "status": "PASS"
+  },
+  "semanticResults": {
+    "staticSelfEdge": "PASS",
+    "staticMutualCycle": "PASS",
+    "concreteCausalCycleRejected": "PASS",
+    "unresolvableContractionCycleRejected": "PASS",
+    "rejectedBundlesPersisted": false
+  },
+  "positiveProductionBundles": [
+    "40000000-0000-4000-8000-000000000001",
+    "40000000-0000-4000-8000-000000000002"
+  ],
+  "negativeBundleIds": [
+    "40000000-0000-4000-8000-000000000003",
+    "40000000-0000-4000-8000-000000000004"
+  ],
+  "negativeResponses": [
+    {
+      "fixture": "03_concrete_cycle_rejected.json",
+      "httpStatus": 422,
+      "reasonCode": "FUTURE_PARENT",
+      "issueCodes": [
+        "FUTURE_PARENT",
+        "TIMESTAMP_INVERSION",
+        "CAUSAL_CYCLE"
+      ],
+      "persisted": false
+    },
+    {
+      "fixture": "04_unresolvable_contraction_cycle_rejected.json",
+      "httpStatus": 422,
+      "reasonCode": "UNRESOLVABLE_CONTRACTION_CYCLE",
+      "issueCodes": [
+        "UNRESOLVABLE_CONTRACTION_CYCLE",
+        "ILLEGAL_EXECUTED_EDGE"
+      ],
+      "persisted": false
+    }
+  ],
+  "fixtureHashes": {
+    "01_static_self_edge_allowed.json": "b7a302039759ae3218afde134d336068db553497ace73394859078dcf537f1a6",
+    "02_static_mutual_cycle_allowed.json": "81554b1584ff1f93b21b309cda87171cf663e1747c50c9d83ae44b675b08c921",
+    "03_concrete_cycle_rejected.json": "0b3ba77c055af23687e5a940274eca5babdabcf67d67b06f4fc050fd7fda1422",
+    "04_unresolvable_contraction_cycle_rejected.json": "b0cabd09e95f01d93c436aae4accd7061476704908fc3e418d0034098e56ce6b"
+  },
+  "claimBoundary": {
+    "staticTopologyCycles": "validated as permissible topology declarations when concrete execution remains causally valid",
+    "concreteExecutionCycles": "validated fail-closed before persistence",
+    "contractionCycles": "unresolvable all-unrecorded contraction cycles validated fail-closed before persistence",
+    "stateHash": "preserved and certificate-bound for accepted cases; private preimage not verified",
+    "cageProducerAuthentication": "not claimed",
+    "executionTruth": "not claimed"
+  }
+}

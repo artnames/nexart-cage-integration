@@ -1,0 +1,117 @@
+{
+  "stage": "10-consolidation-and-conformance",
+  "generatedAt": "2026-09-17T13:40:01.563007Z",
+  "status": "PASS",
+  "networkCalls": 0,
+  "productionCalls": 0,
+  "baseline": {
+    "canonicalNode": "0.29.0",
+    "governedExecutionSdk": "0.4.0",
+    "cageRepository": "google/cybernetic-agent-governance-engine",
+    "cageCommit": "8162958ac23d958871fd4016f349a7062627fd4d",
+    "cageIntegrationBoundary": "provider_02"
+  },
+  "validatedStages": [
+    {
+      "stage": 1,
+      "status": "PASS",
+      "summary": "results/2026-09-17-node-0.29.0/stage-01/stage-01-summary.json",
+      "summarySha256": "863a1e50017ef76a6688876086d3dd3d175c52fa1cca454a346d2f26c677920f"
+    },
+    {
+      "stage": 2,
+      "status": "PASS",
+      "summary": "results/2026-09-17-node-0.29.0/stage-02/stage-02-final-summary.json",
+      "summarySha256": "da1ca4615f4ccc1ab25273d1406726f255be5237549b83276c317881cab076d3"
+    },
+    {
+      "stage": 3,
+      "status": "PASS",
+      "summary": "results/2026-09-17-node-0.29.0/stage-03/stage-03-final-summary.json",
+      "summarySha256": "5f03a98d98f1ec348f21f950f591efc2a46686c85e33701f7ad6d2ae8fa7833a"
+    },
+    {
+      "stage": 4,
+      "status": "PASS",
+      "summary": "results/2026-09-17-node-0.29.0/stage-04/stage-04-final-summary.json",
+      "summarySha256": "ef65b5fc60b16eabba076d4c0214ce9e2d3eb491a688c9eb4a4c96ec364bec81"
+    },
+    {
+      "stage": 5,
+      "status": "PASS",
+      "summary": "results/2026-09-17-node-0.29.0/stage-05/stage-05-final-summary.json",
+      "summarySha256": "9fd843a7fd955ce5e9252c28d98aae0706b227676d41db545e95c5dd2cfd0ffa"
+    },
+    {
+      "stage": 6,
+      "status": "PASS",
+      "summary": "results/2026-09-17-node-0.29.0/stage-06/stage-06-final-summary.json",
+      "summarySha256": "f93d51527e31f2b028979df6ea70634211328f20ce515fe617e6e6410ee9d04a"
+    },
+    {
+      "stage": 7,
+      "status": "PASS",
+      "summary": "results/2026-09-17-node-0.29.0/stage-07/stage-07-final-summary.json",
+      "summarySha256": "f0266c9227bbdffa46c0c0e5d0f71747a97717453134bf542035e91cd88f753f"
+    },
+    {
+      "stage": 8,
+      "status": "PASS",
+      "summary": "results/2026-09-17-node-0.29.0/stage-08/stage-08-final-summary.json",
+      "summarySha256": "f3ce9c36c6bc59459bb009f2f444a250c06a5a7e47288ccee5eb832caa571c36"
+    },
+    {
+      "stage": 9,
+      "status": "PASS",
+      "summary": "results/2026-09-17-node-0.29.0/stage-09/stage-09-final-summary.json",
+      "summarySha256": "086a2b26f708cdd6c93e34efbc1dd7dc017db2613db6739f281c5f3feac57a7d"
+    }
+  ],
+  "stage09ProductionProof": {
+    "fixtureSha256": "698bcaf82901c9b33676d88433cc72dbbdb0f2578efa8fa9ef802a25a6904bd9",
+    "bundleId": "613702d8-fdc0-40bc-9723-c21111c216db",
+    "threadId": "stage09-real-adapter-cbf",
+    "terminalPath": "cbf_block",
+    "productionHttpStatus": 201,
+    "replayed": false,
+    "verifiedCerCount": 4,
+    "uniqueCertificateHashes": 4,
+    "certificateHashes": [
+      "sha256:d805dc61e9fa6efe3f637695bacaf15b5ab3729d6325138a840e2249cb0ee1de",
+      "sha256:8e290d2d4e4c872205696391a19cbb8ffdabbe7b786b3b9dbee76cb670cd2436",
+      "sha256:392cf9929300429d3fa9843211b82019ee1facb39fb7e0bdeac05b3a6ed92ad5",
+      "sha256:fd78478d7d2a16a3403555599177f7a1d486ecb793c1c520f79503ef6cf95bb1"
+    ]
+  },
+  "stage08CryptographicEvidence": {
+    "independentCerVerification": "PASS",
+    "receiptSignatureVerification": "PASS",
+    "verificationEnvelopeSignatureVerification": "PASS",
+    "protectedFieldTamperControls": "16/16 PASS",
+    "productionWrites": 0
+  },
+  "upstreamCageFindings": {
+    "hitlStateHashOmitted": true,
+    "hitlSyntheticNodeMissingFromTopology": true,
+    "hitlCausalLinkageObservation": true,
+    "hitlProductionEligible": false
+  },
+  "claimBoundary": {
+    "executionEvidenceIntegrity": "validated",
+    "nexartAttestationAuthenticity": "validated",
+    "realCageCbfProductionInteroperability": "validated",
+    "stateHashPrivatePreimage": "not verified",
+    "cageProducerAuthentication": "not claimed",
+    "executionTruth": "not claimed",
+    "policyCorrectness": "not claimed",
+    "safety": "not claimed",
+    "legalCompliance": "not claimed"
+  },
+  "generatedDocuments": [
+    "CONFORMANCE.md",
+    "EVIDENCE_MATRIX.md",
+    "CLAIM_BOUNDARIES.md",
+    "UPSTREAM_CAGE_GAPS.md",
+    "REPRODUCIBILITY.md"
+  ]
+}

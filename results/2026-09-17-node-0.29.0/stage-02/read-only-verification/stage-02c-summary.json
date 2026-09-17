@@ -1,0 +1,985 @@
+{
+  "stage": "02c-read-only-persisted-cer-verification",
+  "generatedAt": "2026-09-17T11:29:01.265Z",
+  "baseline": {
+    "cageCommit": "8162958ac23d958871fd4016f349a7062627fd4d",
+    "governedExecutionSdk": "0.4.0",
+    "canonicalNode": "0.29.0"
+  },
+  "productionWritesPerformedInThisStage": false,
+  "fixtureCount": 5,
+  "expectedCerCount": 38,
+  "expectedSteps": 38,
+  "verifiedCerCount": 38,
+  "uniqueCertificateHashes": 38,
+  "fixtures": [
+    {
+      "fixture": "01_single_path_happy.json",
+      "bundleId": "a1b2c3d4-e5f6-4789-a012-3456789abcde",
+      "terminalPath": "happy_path",
+      "expectedSteps": 4,
+      "actualSteps": 4,
+      "httpStatus": 200,
+      "verifiedCers": 4,
+      "rowShape": {
+        "rowKeys": [
+          "bundlePk",
+          "certificateHash",
+          "createdAt",
+          "id",
+          "nodeName",
+          "ordinal",
+          "proof",
+          "stateHash",
+          "stepId",
+          "timestampUtc"
+        ],
+        "proofKeys": [
+          "apiKeyId",
+          "appId",
+          "archivedAt",
+          "artifactPath",
+          "attestationId",
+          "bundleType",
+          "certificateHash",
+          "createdAt",
+          "deletedAt",
+          "error",
+          "executionId",
+          "exportCount",
+          "exportStatus",
+          "hiddenAt",
+          "id",
+          "inputHash",
+          "lifecycleState",
+          "meta",
+          "nodeRuntimeHash",
+          "outputHash",
+          "proofJson",
+          "protocolVersion",
+          "retentionClass",
+          "sdkVersion",
+          "status",
+          "usageEventId",
+          "visibilityState"
+        ]
+      },
+      "cers": [
+        {
+          "ordinal": 0,
+          "stepId": "00000001-0000-4000-8000-000000000001",
+          "nodeName": "input_validator",
+          "certificateHash": "sha256:01b0fb50a396826e4888d60aeef00f37946dc5412d7cd2293a7dd543ace38713",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 1,
+          "stepId": "00000001-0000-4000-8000-000000000002",
+          "nodeName": "safety_check",
+          "certificateHash": "sha256:a077e339e2d3a4b4b4d9c5a6904e43e08a3f27457b930d909a3029142e59a022",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 2,
+          "stepId": "00000001-0000-4000-8000-000000000003",
+          "nodeName": "governed_executor",
+          "certificateHash": "sha256:705d4d7df878161d147d7e6041d9b69ecd0cd57ac14729527bec2f0cf83879eb",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 3,
+          "stepId": "00000001-0000-4000-8000-000000000004",
+          "nodeName": "report_generator",
+          "certificateHash": "sha256:c4cb623713b85992a5dd2e0813d71bdfccfd0a37b49e8f5f00774d75413dae3c",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "02_cbf_block.json",
+      "bundleId": "b2c3d4e5-f6a7-4890-b123-456789abcdef",
+      "terminalPath": "cbf_block",
+      "expectedSteps": 3,
+      "actualSteps": 3,
+      "httpStatus": 200,
+      "verifiedCers": 3,
+      "rowShape": {
+        "rowKeys": [
+          "bundlePk",
+          "certificateHash",
+          "createdAt",
+          "id",
+          "nodeName",
+          "ordinal",
+          "proof",
+          "stateHash",
+          "stepId",
+          "timestampUtc"
+        ],
+        "proofKeys": [
+          "apiKeyId",
+          "appId",
+          "archivedAt",
+          "artifactPath",
+          "attestationId",
+          "bundleType",
+          "certificateHash",
+          "createdAt",
+          "deletedAt",
+          "error",
+          "executionId",
+          "exportCount",
+          "exportStatus",
+          "hiddenAt",
+          "id",
+          "inputHash",
+          "lifecycleState",
+          "meta",
+          "nodeRuntimeHash",
+          "outputHash",
+          "proofJson",
+          "protocolVersion",
+          "retentionClass",
+          "sdkVersion",
+          "status",
+          "usageEventId",
+          "visibilityState"
+        ]
+      },
+      "cers": [
+        {
+          "ordinal": 0,
+          "stepId": "00000002-0000-4000-8000-000000000001",
+          "nodeName": "request_parser",
+          "certificateHash": "sha256:8c1d1dcae12699b2d10a9a1f6beed20c40622f720339c3c248ed8e9e3ba7ed8e",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 1,
+          "stepId": "00000002-0000-4000-8000-000000000002",
+          "nodeName": "cbf_velocity_check",
+          "certificateHash": "sha256:cc205962e0bbcc6e0e984a6e9b7b47f332cd4cff2ad2d5675e79751378738c10",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 2,
+          "stepId": "00000002-0000-4000-8000-000000000003",
+          "nodeName": "termination_handler",
+          "certificateHash": "sha256:fe08b9d09f92685e6f366eb76b965bd8625d5bc88885efee12dc2af5405495ce",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "03_loop_breaker.json",
+      "bundleId": "c3d4e5f6-a7b8-4901-c234-56789abcdef0",
+      "terminalPath": "loop_breaker",
+      "expectedSteps": 6,
+      "actualSteps": 6,
+      "httpStatus": 200,
+      "verifiedCers": 6,
+      "rowShape": {
+        "rowKeys": [
+          "bundlePk",
+          "certificateHash",
+          "createdAt",
+          "id",
+          "nodeName",
+          "ordinal",
+          "proof",
+          "stateHash",
+          "stepId",
+          "timestampUtc"
+        ],
+        "proofKeys": [
+          "apiKeyId",
+          "appId",
+          "archivedAt",
+          "artifactPath",
+          "attestationId",
+          "bundleType",
+          "certificateHash",
+          "createdAt",
+          "deletedAt",
+          "error",
+          "executionId",
+          "exportCount",
+          "exportStatus",
+          "hiddenAt",
+          "id",
+          "inputHash",
+          "lifecycleState",
+          "meta",
+          "nodeRuntimeHash",
+          "outputHash",
+          "proofJson",
+          "protocolVersion",
+          "retentionClass",
+          "sdkVersion",
+          "status",
+          "usageEventId",
+          "visibilityState"
+        ]
+      },
+      "cers": [
+        {
+          "ordinal": 0,
+          "stepId": "00000003-0000-4000-8000-000000000001",
+          "nodeName": "query_planner",
+          "certificateHash": "sha256:eeb036af75a89add1835a99cff474c58cdecc7c27509c0f2b3517c814beddf60",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 1,
+          "stepId": "00000003-0000-4000-8000-000000000002",
+          "nodeName": "executor",
+          "certificateHash": "sha256:3102910218e0be279292d3ed13683ce77853d98d5fb5d5c10f881c764cc4d66c",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 2,
+          "stepId": "00000003-0000-4000-8000-000000000003",
+          "nodeName": "query_planner",
+          "certificateHash": "sha256:66e329620f4a982925d2484f613242cff3d2224ecc2a9925b3a115eec29bfdd0",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 3,
+          "stepId": "00000003-0000-4000-8000-000000000004",
+          "nodeName": "executor",
+          "certificateHash": "sha256:bdaf9a92d19d475f05992bf7ac8f53cb921007389d2333d7c5b7605fad916ec5",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 4,
+          "stepId": "00000003-0000-4000-8000-000000000005",
+          "nodeName": "query_planner",
+          "certificateHash": "sha256:7080ce9aed42ca59dfac566b0ec4cb641a7cd3becdce3b3f0ffe93294df49126",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 5,
+          "stepId": "00000003-0000-4000-8000-000000000006",
+          "nodeName": "loop_breaker",
+          "certificateHash": "sha256:fc5d67cc383ae04c8a7db161a87c425c7db17fbfa52f8a53f35b5fee343818ed",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "04_nemo_policy_block.json",
+      "bundleId": "d4e5f6a7-b8c9-4012-d345-6789abcdef01",
+      "terminalPath": "nemo_block",
+      "expectedSteps": 3,
+      "actualSteps": 3,
+      "httpStatus": 200,
+      "verifiedCers": 3,
+      "rowShape": {
+        "rowKeys": [
+          "bundlePk",
+          "certificateHash",
+          "createdAt",
+          "id",
+          "nodeName",
+          "ordinal",
+          "proof",
+          "stateHash",
+          "stepId",
+          "timestampUtc"
+        ],
+        "proofKeys": [
+          "apiKeyId",
+          "appId",
+          "archivedAt",
+          "artifactPath",
+          "attestationId",
+          "bundleType",
+          "certificateHash",
+          "createdAt",
+          "deletedAt",
+          "error",
+          "executionId",
+          "exportCount",
+          "exportStatus",
+          "hiddenAt",
+          "id",
+          "inputHash",
+          "lifecycleState",
+          "meta",
+          "nodeRuntimeHash",
+          "outputHash",
+          "proofJson",
+          "protocolVersion",
+          "retentionClass",
+          "sdkVersion",
+          "status",
+          "usageEventId",
+          "visibilityState"
+        ]
+      },
+      "cers": [
+        {
+          "ordinal": 0,
+          "stepId": "00000004-0000-4000-8000-000000000001",
+          "nodeName": "request_intake",
+          "certificateHash": "sha256:cbb76b1f08c3bfcbde41b7e56b4041599f2be469fb708601bf1afc6a96070e60",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 1,
+          "stepId": "00000004-0000-4000-8000-000000000002",
+          "nodeName": "nemo_guardrails_check",
+          "certificateHash": "sha256:2beb48de9c64d822b53aa2db2bd5b626ec25b33c62351a1e34d130ed67edc953",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 2,
+          "stepId": "00000004-0000-4000-8000-000000000003",
+          "nodeName": "policy_enforcement",
+          "certificateHash": "sha256:476086a0bc8111d2047fb0cbb25943c0116f03a81d348ddb20e7af4e4d981df7",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "05_large_dag.json",
+      "bundleId": "e5f6a7b8-c9d0-4123-e456-789abcdef012",
+      "terminalPath": "happy_path",
+      "expectedSteps": 22,
+      "actualSteps": 22,
+      "httpStatus": 200,
+      "verifiedCers": 22,
+      "rowShape": {
+        "rowKeys": [
+          "bundlePk",
+          "certificateHash",
+          "createdAt",
+          "id",
+          "nodeName",
+          "ordinal",
+          "proof",
+          "stateHash",
+          "stepId",
+          "timestampUtc"
+        ],
+        "proofKeys": [
+          "apiKeyId",
+          "appId",
+          "archivedAt",
+          "artifactPath",
+          "attestationId",
+          "bundleType",
+          "certificateHash",
+          "createdAt",
+          "deletedAt",
+          "error",
+          "executionId",
+          "exportCount",
+          "exportStatus",
+          "hiddenAt",
+          "id",
+          "inputHash",
+          "lifecycleState",
+          "meta",
+          "nodeRuntimeHash",
+          "outputHash",
+          "proofJson",
+          "protocolVersion",
+          "retentionClass",
+          "sdkVersion",
+          "status",
+          "usageEventId",
+          "visibilityState"
+        ]
+      },
+      "cers": [
+        {
+          "ordinal": 0,
+          "stepId": "00000005-0000-4000-8000-000000000001",
+          "nodeName": "ingestion_gateway",
+          "certificateHash": "sha256:a92404a4f463ba229a3bf7a073180a9702d45641aa68a6b30302ca51fa9bcafb",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 1,
+          "stepId": "00000005-0000-4000-8000-000000000002",
+          "nodeName": "schema_validator",
+          "certificateHash": "sha256:a6b8c4940b7bdef039bb2f24c19136bd6661c1b233011de12613719159f4fe3d",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 2,
+          "stepId": "00000005-0000-4000-8000-000000000003",
+          "nodeName": "auth_check",
+          "certificateHash": "sha256:66e932dfe66d41010ef2819d03e4a7a8a06f26f442466e61acb38c2d0e88afb7",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 3,
+          "stepId": "00000005-0000-4000-8000-000000000004",
+          "nodeName": "risk_profiler",
+          "certificateHash": "sha256:d22fd55605c80e461801232b837e8347a7303a07186ac6bf974621c42f46a2d5",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 4,
+          "stepId": "00000005-0000-4000-8000-000000000005",
+          "nodeName": "intent_classifier",
+          "certificateHash": "sha256:6227ddd98915dc35bf66ff18554f6577f6c5b1df395ce27f825616d58ed3f6ec",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 5,
+          "stepId": "00000005-0000-4000-8000-000000000006",
+          "nodeName": "branch_router",
+          "certificateHash": "sha256:78eb83899c456f290640ea7a979e3d300c3dca2822c60b7dab24cb3c11d78f8b",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 6,
+          "stepId": "00000005-0000-4000-8000-000000000007",
+          "nodeName": "data_retrieval_branch_a",
+          "certificateHash": "sha256:a568d31364d29ead286b58344ddb9fcf7c433049f975a9b818c1069f0167497d",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 7,
+          "stepId": "00000005-0000-4000-8000-000000000008",
+          "nodeName": "ml_inference_branch_b",
+          "certificateHash": "sha256:4d8110806d47ca6e9306c5d26a25e840363466ea3e085a4fb943cf993f059db7",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 8,
+          "stepId": "00000005-0000-4000-8000-000000000009",
+          "nodeName": "compliance_check_branch_c",
+          "certificateHash": "sha256:89abf06a01b637fc6d9da031c769109b4eac3a6cec810847e92aedef2bb24a6a",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 9,
+          "stepId": "00000005-0000-4000-8000-000000000010",
+          "nodeName": "cache_lookup",
+          "certificateHash": "sha256:d22923f8dca45d302185f1d393749ae6a7557a5005032374020b9c6f11624be3",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 10,
+          "stepId": "00000005-0000-4000-8000-000000000011",
+          "nodeName": "enrichment_engine",
+          "certificateHash": "sha256:444373d68b4d999be7687e989a28ff31010b3aa9b03ba3253ba30ba597c66553",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 11,
+          "stepId": "00000005-0000-4000-8000-000000000012",
+          "nodeName": "feature_extractor",
+          "certificateHash": "sha256:24b3f04945586060a2f43a2734d31756dd188ce2094c03e73bcdb26248d0f7a5",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 12,
+          "stepId": "00000005-0000-4000-8000-000000000013",
+          "nodeName": "anomaly_detector",
+          "certificateHash": "sha256:e7d75e9a3c6d1f26b5487fb848cc52392a784c0c2111868568c96cf76e5c09d5",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 13,
+          "stepId": "00000005-0000-4000-8000-000000000014",
+          "nodeName": "policy_engine",
+          "certificateHash": "sha256:d39f7e36aeca2b941b9922efc3ac7b502d6c50047713a64ecacb3d13e4d1a191",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 14,
+          "stepId": "00000005-0000-4000-8000-000000000015",
+          "nodeName": "cbf_safety_check",
+          "certificateHash": "sha256:c93d3ea4c30c6becd4577a458957efb7e779f7d2f43e9cebbd9fae52c9d423f5",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 15,
+          "stepId": "00000005-0000-4000-8000-000000000016",
+          "nodeName": "convergence_point",
+          "certificateHash": "sha256:fad556ffa1c75cb8069db80e062dc4025d7e793f9e676825fbde517f2e1e19ea",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 16,
+          "stepId": "00000005-0000-4000-8000-000000000017",
+          "nodeName": "result_aggregator",
+          "certificateHash": "sha256:c9748dd821e45fa72ad59ad1e7dafd39933f576c87f28900e10f6093f61c8e90",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 17,
+          "stepId": "00000005-0000-4000-8000-000000000018",
+          "nodeName": "quality_scorer",
+          "certificateHash": "sha256:5bc86e8df02057c6a01e0275b71405c7486bc399ac656577196b4bb1b786a75f",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 18,
+          "stepId": "00000005-0000-4000-8000-000000000019",
+          "nodeName": "formatter",
+          "certificateHash": "sha256:b4a54ea8c73d84f8a8512d4ff89f07d2236bcbb604d2302e77bafd10cdc9008d",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 19,
+          "stepId": "00000005-0000-4000-8000-000000000020",
+          "nodeName": "encryption_wrapper",
+          "certificateHash": "sha256:1c900fc9edbebc22c50d0acc996c7c74e05957388df8ebd7e820365fb3788d9a",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 20,
+          "stepId": "00000005-0000-4000-8000-000000000021",
+          "nodeName": "audit_logger",
+          "certificateHash": "sha256:d886ea536969a161858a7ffd934e1e89df31f9024581cef4de7ef0cdde1960f1",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        },
+        {
+          "ordinal": 21,
+          "stepId": "00000005-0000-4000-8000-000000000022",
+          "nodeName": "response_sender",
+          "certificateHash": "sha256:aaa06b4471dac30ab5f882cad2aba3e65aa43cc4d094348a25a184b78bf17ecf",
+          "checks": {
+            "sdkOk": true,
+            "certificateIntegrity": true,
+            "stateHashNotPerformed": true,
+            "stepIdPreserved": true,
+            "nodeNamePreserved": true,
+            "parentStepIdsPreserved": true,
+            "stateHashPreserved": true,
+            "certificateHashShape": true,
+            "uniqueCertificateHash": true
+          },
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "claimBoundary": {
+    "certificateIntegrity": "independently verified with SDK 0.4.0",
+    "nodePersistence": "validated through authenticated read-back",
+    "stateHash": "preserved and certificate-bound; preimage not verified",
+    "cageProducerAuthentication": "not claimed",
+    "executionTruth": "not claimed",
+    "policyCorrectness": "not claimed"
+  },
+  "status": "PASS"
+}

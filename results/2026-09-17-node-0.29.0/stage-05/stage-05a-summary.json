@@ -1,0 +1,177 @@
+{
+  "stage": "05a-local-terminal-path-semantics",
+  "sdk": "0.4.0",
+  "cases": [
+    {
+      "name": "01_happy_terminal_reached",
+      "expectation": "ACCEPT",
+      "declaredTerminalPath": "happy_path",
+      "expectedPath": "happy_path",
+      "valid": true,
+      "issueCodes": [],
+      "requiredCodes": [],
+      "sealedRecordCount": 4,
+      "allCersVerify": true,
+      "report": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "02_terminal_wins_over_cbf",
+      "expectation": "ACCEPT",
+      "declaredTerminalPath": "happy_path",
+      "expectedPath": "happy_path",
+      "valid": true,
+      "issueCodes": [],
+      "requiredCodes": [],
+      "sealedRecordCount": 4,
+      "allCersVerify": true,
+      "report": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "03_cbf_block",
+      "expectation": "ACCEPT",
+      "declaredTerminalPath": "cbf_block",
+      "expectedPath": "cbf_block",
+      "valid": true,
+      "issueCodes": [],
+      "requiredCodes": [],
+      "sealedRecordCount": 3,
+      "allCersVerify": true,
+      "report": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "04_loop_breaker",
+      "expectation": "ACCEPT",
+      "declaredTerminalPath": "loop_breaker",
+      "expectedPath": "loop_breaker",
+      "valid": true,
+      "issueCodes": [],
+      "requiredCodes": [],
+      "sealedRecordCount": 6,
+      "allCersVerify": true,
+      "report": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "05_nemo_block",
+      "expectation": "ACCEPT",
+      "declaredTerminalPath": "nemo_block",
+      "expectedPath": "nemo_block",
+      "valid": true,
+      "issueCodes": [],
+      "requiredCodes": [],
+      "sealedRecordCount": 3,
+      "allCersVerify": true,
+      "report": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "06_cbf_wins_over_loop",
+      "expectation": "ACCEPT",
+      "declaredTerminalPath": "cbf_block",
+      "expectedPath": "cbf_block",
+      "valid": true,
+      "issueCodes": [],
+      "requiredCodes": [],
+      "sealedRecordCount": 3,
+      "allCersVerify": true,
+      "report": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "07_loop_wins_over_nemo",
+      "expectation": "ACCEPT",
+      "declaredTerminalPath": "loop_breaker",
+      "expectedPath": "loop_breaker",
+      "valid": true,
+      "issueCodes": [],
+      "requiredCodes": [],
+      "sealedRecordCount": 6,
+      "allCersVerify": true,
+      "report": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": true
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "08_terminal_path_mismatch",
+      "expectation": "REJECT",
+      "declaredTerminalPath": "happy_path",
+      "expectedPath": null,
+      "valid": false,
+      "issueCodes": [
+        "TERMINAL_PATH_MISMATCH"
+      ],
+      "requiredCodes": [
+        "TERMINAL_PATH_MISMATCH"
+      ],
+      "sealedRecordCount": null,
+      "allCersVerify": null,
+      "report": {
+        "schemaErrors": [],
+        "causalErrors": [],
+        "topologyErrors": [
+          {
+            "code": "TERMINAL_PATH_MISMATCH",
+            "path": "bundle.terminalPath",
+            "message": "submitted terminal path happy_path does not match derived terminal path cbf_block"
+          }
+        ],
+        "resourceErrors": [],
+        "warnings": [],
+        "valid": false
+      },
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

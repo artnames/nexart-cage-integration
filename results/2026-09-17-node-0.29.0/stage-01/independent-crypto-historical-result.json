@@ -1,0 +1,90 @@
+{
+  "test": "independent-crypto",
+  "phase": "phase-07",
+  "status": "PASS",
+  "recordType": "curated-historical-acceptance-summary",
+  "publicationAudit": {
+    "date": "2026-09-16",
+    "publicHarnessRerun": true,
+    "reproductionStatus": "PASS"
+  },
+  "reproduction": {
+    "harness": "tests/independent-crypto.mjs",
+    "mode": "read-only public evidence validation"
+  },
+  "environment": {
+    "nodeUrl": "https://node.nexart.io",
+    "sdkUsedForVerification": false,
+    "verificationRuntime": "Node.js standard cryptography"
+  },
+  "publicCer": {
+    "certificateHash": "sha256:d3cd87f868f4c4e018d420bef6e9330e4a233b84610474cf716327e0fa495528",
+    "cerFamily": "cer.governed.execution.step.v1",
+    "cerVersion": "1",
+    "status": "PASS"
+  },
+  "certificateVerification": {
+    "protectedProjectionReconstructedLocally": true,
+    "jcsCanonicalizationPerformedLocally": true,
+    "sha256ComputedLocally": true,
+    "computedHash": "sha256:d3cd87f868f4c4e018d420bef6e9330e4a233b84610474cf716327e0fa495528",
+    "matchesPublishedCertificateHash": true,
+    "publicCanonicalPayloadMatched": true,
+    "status": "PASS"
+  },
+  "nodeKeyDiscovery": {
+    "endpoint": "https://node.nexart.io/.well-known/nexart-node.json",
+    "kid": "k1",
+    "algorithm": "Ed25519",
+    "keyType": "OKP",
+    "curve": "Ed25519",
+    "jwkX": "30ROjmcwj5oowj_fflAqdyacB0ik7eEnndzNKJmy9uU",
+    "active": true,
+    "revoked": false,
+    "status": "PASS"
+  },
+  "attestationVerification": {
+    "signedEnvelopeReconstructedLocally": true,
+    "signedFields": [
+      "attestation",
+      "bundle"
+    ],
+    "bundleProjectionReconstructedFromCer": true,
+    "jcsCanonicalizationPerformedLocally": true,
+    "publishedEnvelopePayloadMatched": true,
+    "ed25519VerifiedUsingStandardCrypto": true,
+    "nodeVerificationFlagsTrusted": false,
+    "status": "PASS"
+  },
+  "negativeControls": {
+    "alteredProtectedContent": {
+      "resultingHash": "sha256:6ba1eb4b28e5ce311c3c5ea7490eaf30c7b7393ace29936894f92c0204e4a535",
+      "differentFromOriginal": true,
+      "status": "PASS"
+    },
+    "alteredSignedPayload": {
+      "originalSignatureAccepted": false,
+      "status": "PASS"
+    },
+    "signatureBitFlip": {
+      "verificationAccepted": false,
+      "status": "PASS"
+    },
+    "unrelatedEd25519Key": {
+      "verificationAccepted": false,
+      "status": "PASS"
+    }
+  },
+  "nodeRuntime": {
+    "runtimeHash": "sha256:2ae1924817b1e7c1ae532738751090df41beef9cb225bb2240826f0469d3a5d0"
+  },
+  "claimBoundary": {
+    "certificateIntegrity": "independently validated",
+    "nodeAttestationAuthenticity": "independently validated",
+    "nexartSdkRequiredForIndependentVerification": false,
+    "nodeVerificationFlagsTrusted": false,
+    "executionTruth": "not claimed",
+    "stateHashPreimage": "not independently verified",
+    "producerCompleteness": "not claimed"
+  }
+}

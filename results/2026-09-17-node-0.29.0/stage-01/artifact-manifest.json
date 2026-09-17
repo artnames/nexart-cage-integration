@@ -1,0 +1,46 @@
+{
+  "algorithm": "sha256",
+  "artifactCount": 8,
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "e197fc402f57c66b4488fa3dc3fe8064b9b6328d07f7cdc1e509f1a7faf413ba",
+      "bytes": 901
+    },
+    {
+      "path": "discovery-stability.txt",
+      "sha256": "0f863b4b52e6112facff9098b3864aa6e8ae4dbe2cdd62b9a4d0229613c0be24",
+      "bytes": 1450
+    },
+    {
+      "path": "independent-crypto-exit-code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "independent-crypto-historical-result.json",
+      "sha256": "c3c27c611e2f0473e96dccdc7d495af553897f04fd6709577de7376d12164bd2",
+      "bytes": 2861
+    },
+    {
+      "path": "independent-crypto-transcript.txt",
+      "sha256": "fb4ae2bf268315a76c448f6568b008c302d2a2b438cca3b400b30250b2a87b86",
+      "bytes": 559
+    },
+    {
+      "path": "node-discovery.json",
+      "sha256": "e77d951d2633e43b5f9b741c5add8b9152d3a1b31cfed8fd1337aeea4b7e8043",
+      "bytes": 541
+    },
+    {
+      "path": "node-status.json",
+      "sha256": "42dcdae6d55a75be4aa647395da7d4af855e7112b03230ade07f83c7cb9f3219",
+      "bytes": 248
+    },
+    {
+      "path": "stage-01-summary.json",
+      "sha256": "863a1e50017ef76a6688876086d3dd3d175c52fa1cca454a346d2f26c677920f",
+      "bytes": 2218
+    }
+  ]
+}

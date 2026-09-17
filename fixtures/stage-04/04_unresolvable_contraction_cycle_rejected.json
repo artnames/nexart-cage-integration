@@ -1,0 +1,63 @@
+{
+  "schema": "urn:cage:governance:v1:attestation-bundle",
+  "bundle": {
+    "bundleId": "40000000-0000-4000-8000-000000000004",
+    "threadId": "stage04-unresolvable-contraction-cycle",
+    "startedAt": "2026-09-17T13:00:00.000Z",
+    "completedAt": "2026-09-17T13:00:01.000Z",
+    "terminalPath": "happy_path",
+    "steps": [
+      {
+        "stepId": "40000004-0000-4000-8000-000000000001",
+        "nodeName": "root",
+        "parentStepIds": [],
+        "timestampUtc": "2026-09-17T13:00:00.000Z",
+        "durationMs": 1,
+        "signals": {},
+        "metadata": {
+          "fixture": "stage-04"
+        },
+        "stateHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      {
+        "stepId": "40000004-0000-4000-8000-000000000002",
+        "nodeName": "leaf",
+        "parentStepIds": [
+          "40000004-0000-4000-8000-000000000001"
+        ],
+        "timestampUtc": "2026-09-17T13:00:01.000Z",
+        "durationMs": 1,
+        "signals": {},
+        "metadata": {
+          "fixture": "stage-04"
+        },
+        "stateHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      }
+    ]
+  },
+  "topology": {
+    "nodes": [
+      "root",
+      "omitted_a",
+      "omitted_b",
+      "leaf"
+    ],
+    "parentEdges": {
+      "root": [],
+      "omitted_a": [
+        "omitted_b"
+      ],
+      "omitted_b": [
+        "omitted_a"
+      ],
+      "leaf": [
+        "omitted_a"
+      ]
+    },
+    "terminalNode": "leaf",
+    "attestationNodes": [
+      "root",
+      "leaf"
+    ]
+  }
+}

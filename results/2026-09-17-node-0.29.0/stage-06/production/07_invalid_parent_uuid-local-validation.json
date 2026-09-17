@@ -1,0 +1,14 @@
+{
+  "schemaErrors": [
+    {
+      "code": "INVALID_PARENT_IDS",
+      "path": "bundle.steps[1].parentStepIds",
+      "message": "array of RFC UUIDs required"
+    }
+  ],
+  "causalErrors": [],
+  "topologyErrors": [],
+  "resourceErrors": [],
+  "warnings": [],
+  "valid": false
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "urn:cage:governance:v1:attestation-bundle",
+  "bundle": {
+    "bundleId": "30000000-0000-4000-8000-000000000001",
+    "threadId": "stage03-ancestor-contraction-linear",
+    "startedAt": "2026-09-17T12:00:00.000Z",
+    "completedAt": "2026-09-17T12:00:02.000Z",
+    "terminalPath": "happy_path",
+    "steps": [
+      {
+        "stepId": "30000001-0000-4000-8000-000000000001",
+        "nodeName": "root",
+        "parentStepIds": [],
+        "timestampUtc": "2026-09-17T12:00:00.000Z",
+        "durationMs": 1,
+        "signals": {
+          "stage03": true,
+          "ordinal": 0
+        },
+        "metadata": {
+          "fixture": "stage-03"
+        },
+        "stateHash": "5080a0282a98afee8a9a63c9b2d75f2cdfbefb71248c56589058bb2d89c9c2b9"
+      },
+      {
+        "stepId": "30000001-0000-4000-8000-000000000002",
+        "nodeName": "leaf",
+        "parentStepIds": [
+          "30000001-0000-4000-8000-000000000001"
+        ],
+        "timestampUtc": "2026-09-17T12:00:01.000Z",
+        "durationMs": 2,
+        "signals": {
+          "stage03": true,
+          "ordinal": 1
+        },
+        "metadata": {
+          "fixture": "stage-03"
+        },
+        "stateHash": "3af28c0f72c3cae94e5ecc5b46d6b21e7a5d99aeb843d9664e589193a5c09d71"
+      }
+    ]
+  },
+  "topology": {
+    "nodes": [
+      "root",
+      "omitted_a",
+      "omitted_b",
+      "leaf"
+    ],
+    "parentEdges": {
+      "root": [],
+      "omitted_a": [
+        "root"
+      ],
+      "omitted_b": [
+        "omitted_a"
+      ],
+      "leaf": [
+        "omitted_b"
+      ]
+    },
+    "terminalNode": "leaf",
+    "attestationNodes": [
+      "root",
+      "leaf"
+    ]
+  }
+}

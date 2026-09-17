@@ -1,0 +1,14 @@
+{
+  "schemaErrors": [
+    {
+      "code": "INVALID_UUID",
+      "path": "bundle.steps[3].stepId",
+      "message": "RFC 4122 UUID v4 required"
+    }
+  ],
+  "causalErrors": [],
+  "topologyErrors": [],
+  "resourceErrors": [],
+  "warnings": [],
+  "valid": false
+}

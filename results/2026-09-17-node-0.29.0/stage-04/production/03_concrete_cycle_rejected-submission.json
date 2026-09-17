@@ -1,0 +1,47 @@
+{
+  "error": "CAGE_VALIDATION_FAILED",
+  "reasonCode": "FUTURE_PARENT",
+  "message": "CAGE execution validation failed",
+  "issues": [
+    {
+      "code": "FUTURE_PARENT",
+      "path": "bundle.steps[0].parentStepIds",
+      "message": "parent must appear before child"
+    },
+    {
+      "code": "TIMESTAMP_INVERSION",
+      "path": "bundle.steps[0].timestampUtc",
+      "message": "parent timestamp must be at or before child timestamp"
+    },
+    {
+      "code": "CAUSAL_CYCLE",
+      "path": "bundle.steps",
+      "message": "cycle includes 00000001-0000-4000-8000-000000000001"
+    }
+  ],
+  "warnings": [],
+  "validation": {
+    "schemaErrors": [],
+    "causalErrors": [
+      {
+        "code": "FUTURE_PARENT",
+        "path": "bundle.steps[0].parentStepIds",
+        "message": "parent must appear before child"
+      },
+      {
+        "code": "TIMESTAMP_INVERSION",
+        "path": "bundle.steps[0].timestampUtc",
+        "message": "parent timestamp must be at or before child timestamp"
+      },
+      {
+        "code": "CAUSAL_CYCLE",
+        "path": "bundle.steps",
+        "message": "cycle includes 00000001-0000-4000-8000-000000000001"
+      }
+    ],
+    "topologyErrors": [],
+    "resourceErrors": [],
+    "warnings": [],
+    "valid": false
+  }
+}

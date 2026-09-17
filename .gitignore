@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.*
+!.env.example
+
+.DS_Store
+*.log
+
+# Local/private material
+private/
+tmp/
+scratch/
+
+# Never commit credentials/private keys
+*.pem
+*.key

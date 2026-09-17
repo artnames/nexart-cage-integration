@@ -1,0 +1,94 @@
+{
+  "stage": "09a-real-current-cage-adapter",
+  "generatedAt": "2026-09-17T12:56:23.215Z",
+  "upstream": {
+    "repository": "google/cybernetic-agent-governance-engine",
+    "commit": "8162958ac23d958871fd4016f349a7062627fd4d",
+    "adapter": "src/integrations/provider_02/adapter.py",
+    "topology": "src/cage_finance/graph_topology.py"
+  },
+  "governedExecutionSdk": "0.4.0",
+  "productionWrites": 0,
+  "fixtureHashes": {
+    "realAdapterCbf": "698bcaf82901c9b33676d88433cc72dbbdb0f2578efa8fa9ef802a25a6904bd9",
+    "realAdapterHitl": "70e15316a345601ed23d62f5b5b373ac873d25a96c4eb6ba98805c40ff250052"
+  },
+  "realAdapterCbf": {
+    "valid": true,
+    "terminalPath": "cbf_block",
+    "stepCount": 4,
+    "nodeNames": [
+      "nemo_guardrail",
+      "evaluator",
+      "safety_check",
+      "explainer"
+    ],
+    "cerCount": 4,
+    "uniqueCertificateHashes": 4,
+    "allCersVerified": true,
+    "certificateHashes": [
+      "sha256:d805dc61e9fa6efe3f637695bacaf15b5ab3729d6325138a840e2249cb0ee1de",
+      "sha256:8e290d2d4e4c872205696391a19cbb8ffdabbe7b786b3b9dbee76cb670cd2436",
+      "sha256:392cf9929300429d3fa9843211b82019ee1facb39fb7e0bdeac05b3a6ed92ad5",
+      "sha256:fd78478d7d2a16a3403555599177f7a1d486ecb793c1c520f79503ef6cf95bb1"
+    ],
+    "status": "PASS"
+  },
+  "realAdapterHitlProbe": {
+    "rawBundleValid": false,
+    "terminalPath": "unknown",
+    "stepCount": 6,
+    "nodeNames": [
+      "nemo_guardrail",
+      "evaluator",
+      "safety_check",
+      "hitl_interrupt",
+      "governed_trader",
+      "explainer"
+    ],
+    "rawIssueCodes": [
+      "INVALID_STATE_HASH"
+    ],
+    "upstreamGaps": [
+      {
+        "code": "HITL_STATE_HASH_OMITTED",
+        "evidence": "synthetic hitl_interrupt step carries empty stateHash",
+        "nexartResult": "INVALID_STATE_HASH"
+      },
+      {
+        "code": "HITL_SYNTHETIC_NODE_NOT_IN_TOPOLOGY",
+        "evidence": "hitl_interrupt is emitted by the adapter but absent from supplied topology.nodes",
+        "diagnosticResult": "UNKNOWN_NODE"
+      }
+    ],
+    "diagnosticOnlyStateHashRepair": true,
+    "diagnosticIssueCodes": [
+      "UNKNOWN_NODE",
+      "ILLEGAL_EXECUTED_EDGE"
+    ],
+    "status": "EXPECTED_UPSTREAM_GAPS"
+  },
+  "causalObservation": {
+    "hitlStepId": "c565f171-0adf-4dc0-9bbf-03ae80592b47",
+    "governedTraderStepId": "f375fa3a-a07d-4316-859d-6d17e3d5a597",
+    "governedTraderParentStepIds": [
+      "51d8b4ee-2aa0-4b25-a574-6dd0bb0c9531"
+    ],
+    "governedTraderReferencesHitlStep": false,
+    "classification": "OBSERVED_ONLY_NOT_INDEPENDENTLY_CLASSIFIED_AS_DEFECT"
+  },
+  "initialAttempt": {
+    "classification": "HARNESS_EXPECTATION_INCOMPLETE",
+    "explanation": "The original Stage 9A harness expected UNKNOWN_NODE directly, but the real CAGE HITL bundle fails earlier because the synthetic HITL step has an empty stateHash.",
+    "productionFailure": false
+  },
+  "claimBoundary": {
+    "cbfFixture": "generated directly by the pinned Google CAGE provider_02 adapter",
+    "hitlFixture": "generated directly by the pinned Google CAGE provider_02 adapter and rejected unchanged by NexArt",
+    "diagnosticDerivative": "used only to isolate the second topology defect; not CAGE-authored evidence and not eligible for production submission",
+    "stateHash": "producer-supplied opaque commitment; NexArt validates shape and cryptographic binding but does not verify the private preimage",
+    "cageProducerAuthentication": "not claimed",
+    "executionTruth": "not claimed"
+  },
+  "status": "PASS"
+}

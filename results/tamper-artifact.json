@@ -1,0 +1,65 @@
+{
+  "test": "tamper-artifact",
+  "phase": "phase-05",
+  "status": "PASS",
+  "recordType": "curated-historical-acceptance-summary",
+  "publicationAudit": {
+    "date": "2026-09-16",
+    "publicHarnessRerun": true,
+    "reproductionStatus": "PASS"
+  },
+  "environment": {
+    "nodeUrl": "https://node.nexart.io",
+    "nodeVersion": "0.28.1",
+    "sdkPackage": "@nexart/governed-execution",
+    "sdkVersion": "0.3.0"
+  },
+  "original": {
+    "certificateHash": "sha256:06ecaef10f7da96162f9290b3a863acede905cfe80a15bf35b8f9025c1dca6b8",
+    "resolverHttpStatus": 200,
+    "cerFamily": "cer.governed.execution.step.v1",
+    "sdkVerification": {
+      "ok": true,
+      "certificateIntegrity": "valid",
+      "stateHashVerification": "not-performed",
+      "executionTruth": "not-claimed"
+    },
+    "nodeStatelessVerification": {
+      "status": "verified",
+      "certificateIntegrity": "PASS",
+      "signatureCheck": "skipped"
+    },
+    "repositoryFixtureSha256": "c897d97973514e89f55ba0d523c1c237c03d592695bcab4073fddff879c4e97a",
+    "status": "PASS"
+  },
+  "tamper": {
+    "field": "step.metadata.tamperProbe",
+    "value": "ALTERED_AFTER_CERTIFICATION",
+    "originalCertificateHashRetained": true,
+    "recomputedCertificateHash": "sha256:ae5969913c4a707376af2d552ebac428d210da87f40cdeeb875432633d394687",
+    "sdkVerification": {
+      "ok": false,
+      "errorCode": "CERTIFICATE_HASH_MISMATCH",
+      "certificateIntegrity": "invalid"
+    },
+    "nodeStatelessVerification": {
+      "status": "failed",
+      "reasonCode": "CERTIFICATE_HASH_MISMATCH",
+      "expectedRecomputedHash": "sha256:ae5969913c4a707376af2d552ebac428d210da87f40cdeeb875432633d394687"
+    },
+    "repositoryFixtureSha256": "d66483da8d3852f7a126dd05aa9a2a84876b502ebe298a71e6a42a837296ed7d",
+    "status": "PASS"
+  },
+  "persistenceCheck": {
+    "originalRefetchedAfterTamperTest": true,
+    "originalRemainedUnchanged": true,
+    "originalStillVerified": true,
+    "status": "PASS"
+  },
+  "claimBoundary": {
+    "postCertificationProtectedContentTamperDetection": "validated",
+    "originalPersistedEvidencePreserved": "validated",
+    "executionTruth": "not claimed",
+    "stateHashPreimage": "not independently verified"
+  }
+}

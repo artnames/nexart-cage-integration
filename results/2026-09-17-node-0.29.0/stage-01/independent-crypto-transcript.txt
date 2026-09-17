@@ -1,0 +1,13 @@
+Public CER retrieval: PASS
+Independent JCS + SHA-256 certificate verification: PASS
+Published envelope canonical payload comparison: PASS
+Signing key discovery (k1): PASS
+Independent Ed25519 attestation verification: PASS
+Negative control — altered protected content: PASS
+Negative control — altered signed payload: PASS
+Negative control — modified signature: PASS
+Negative control — unrelated key: PASS
+
+Certificate: sha256:d3cd87f868f4c4e018d420bef6e9330e4a233b84610474cf716327e0fa495528
+Signing kid: k1
+Independent cryptographic verification: PASS

@@ -1,0 +1,79 @@
+{
+  "test": "minimal-integration",
+  "phase": "phase-09",
+  "status": "PASS",
+  "recordType": "curated-historical-acceptance-summary",
+  "publicationAudit": {
+    "date": "2026-09-16",
+    "localFixtureValidation": "PASS",
+    "authenticatedRecordedExecutionValidation": "NOT_RUN"
+  },
+  "reproduction": {
+    "harness": "tests/minimal-integration-validation.mjs",
+    "mode": "local fixture validation plus authenticated read-only retrieval"
+  },
+  "environment": {
+    "nodeUrl": "https://node.nexart.io",
+    "nodeVersion": "0.28.1",
+    "sdkPackage": "@nexart/governed-execution",
+    "sdkVersion": "0.3.0",
+    "cerFamily": "cer.governed.execution.step.v1",
+    "cerVersion": "1"
+  },
+  "execution": {
+    "bundleId": "744ba34a-89e1-4d50-b1ab-4283a61ea5d0",
+    "stepCount": 3,
+    "nodes": [
+      "intake",
+      "decision",
+      "complete"
+    ],
+    "terminalPath": "happy_path"
+  },
+  "validation": {
+    "nativeCageValidation": "PASS",
+    "schema": "urn:cage:governance:v1:attestation-bundle"
+  },
+  "registration": {
+    "httpStatus": 201,
+    "cerCount": 3,
+    "certificateHashesUnique": true,
+    "status": "PASS"
+  },
+  "persistence": {
+    "bundleRetrieved": true,
+    "stepCountRetrieved": 3,
+    "parentStepIdsPreserved": true,
+    "status": "PASS"
+  },
+  "cerVerification": {
+    "expected": 3,
+    "verified": 3,
+    "allPassed": true,
+    "status": "PASS"
+  },
+  "graph": {
+    "observedTraversal": [
+      "intake",
+      "decision",
+      "complete"
+    ],
+    "relationshipModel": "parentStepIds",
+    "status": "PASS"
+  },
+  "outcome": {
+    "nativeCageInputAccepted": true,
+    "oneCerPerExecutedStep": true,
+    "persistedGraphQueryable": true,
+    "localCerVerificationPassed": true,
+    "status": "PASS"
+  },
+  "claimBoundary": {
+    "integrationFlow": "validated",
+    "certificateIntegrity": "validated",
+    "parentRelationshipPreservation": "validated",
+    "executionTruth": "not claimed",
+    "stateHashPreimage": "not independently verified",
+    "producerCompleteness": "not claimed"
+  }
+}

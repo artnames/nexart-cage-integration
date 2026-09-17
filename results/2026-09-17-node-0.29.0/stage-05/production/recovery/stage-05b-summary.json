@@ -1,0 +1,91 @@
+{
+  "stage": "05b-production-terminal-path-precedence",
+  "recovery": {
+    "required": true,
+    "cause": "initial harness read persisted terminalPath from the response wrapper instead of response.bundle",
+    "classification": "HARNESS_DEFECT",
+    "productionFailure": false,
+    "originalSuccessfulRequestCount": 1,
+    "resumedRequestCount": 3
+  },
+  "generatedAt": "2026-09-17T12:09:56.526Z",
+  "baseline": {
+    "governedExecutionSdk": "0.4.0",
+    "canonicalNode": "0.29.0",
+    "schema": "urn:cage:governance:v1:attestation-bundle"
+  },
+  "productionWriteAuthorized": true,
+  "authorizedRequestCount": 4,
+  "persistedProductionBundles": 3,
+  "expectedPersistedProductionBundles": 3,
+  "rejectedRequests": 1,
+  "expectedRejectedRequests": 1,
+  "verifiedCerCount": 13,
+  "expectedVerifiedCerCount": 13,
+  "uniqueCertificateHashes": 13,
+  "expectedUniqueCertificateHashes": 13,
+  "positiveCases": [
+    {
+      "fixture": "02_terminal_wins_over_cbf.json",
+      "bundleId": "50000000-0000-4000-8000-000000000002",
+      "origin": "recovered",
+      "terminalPath": "happy_path",
+      "persistedStepCount": 4,
+      "verifiedCers": 4,
+      "status": "PASS"
+    },
+    {
+      "fixture": "06_cbf_wins_over_loop.json",
+      "bundleId": "50000000-0000-4000-8000-000000000006",
+      "origin": "submitted",
+      "terminalPath": "cbf_block",
+      "persistedStepCount": 3,
+      "verifiedCers": 3,
+      "status": "PASS"
+    },
+    {
+      "fixture": "07_loop_wins_over_nemo.json",
+      "bundleId": "50000000-0000-4000-8000-000000000007",
+      "origin": "submitted",
+      "terminalPath": "loop_breaker",
+      "persistedStepCount": 6,
+      "verifiedCers": 6,
+      "status": "PASS"
+    }
+  ],
+  "negativeCases": [
+    {
+      "fixture": "08_terminal_path_mismatch.json",
+      "bundleId": "50000000-0000-4000-8000-000000000008",
+      "httpStatus": 422,
+      "reasonCode": "TERMINAL_PATH_MISMATCH",
+      "issueCodes": [
+        "TERMINAL_PATH_MISMATCH"
+      ],
+      "bundleReadAfterRejection": 404,
+      "stepsReadAfterRejection": 404,
+      "persisted": false,
+      "status": "PASS"
+    }
+  ],
+  "fixtureHashes": {
+    "02_terminal_wins_over_cbf.json": "0d3fb0712b43256dfcd2c3cdcb0c9c482762b6652d96b32fd9050223e3f0b575",
+    "06_cbf_wins_over_loop.json": "dab7d26e2f06213340090af14d49d884e37f8c7541cd357c213cd73216eb3f24",
+    "07_loop_wins_over_nemo.json": "d3c7a22c3bd27ac1a7fe4681ff1d27164e696f3ba2367f79ce3aadd8373cb608",
+    "08_terminal_path_mismatch.json": "cea2725e05917b2e29b3101677fb5c489dda57a6b6ff2f951d9621954b6d4387"
+  },
+  "conclusions": {
+    "terminalNodePrecedence": "validated in production",
+    "cbfOverLoopPrecedence": "validated in production",
+    "loopOverNemoPrecedence": "validated in production",
+    "terminalPathMismatch": "rejected before persistence"
+  },
+  "claimBoundary": {
+    "terminalPathSemantics": "validated against supplied topology and captured execution evidence",
+    "stateHash": "preserved and certificate-bound; private preimage not verified",
+    "cageProducerAuthentication": "not claimed",
+    "executionTruth": "not claimed",
+    "policyCorrectness": "not claimed"
+  },
+  "status": "PASS"
+}

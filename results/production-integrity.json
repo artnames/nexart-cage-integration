@@ -1,0 +1,125 @@
+{
+    "test": "production-integrity",
+    "phase": "phase-01",
+    "status": "PASS",
+    "recordType": "curated-historical-acceptance-summary",
+    "publicationAudit": {
+      "date": "2026-09-16",
+      "historicalTranscriptCrossChecked": true,
+      "authenticatedHarnessRerun": false
+    },
+    "environment": {
+      "nodeUrl": "https://node.nexart.io",
+      "nodeVersion": "0.28.1",
+      "sdkPackage": "@nexart/governed-execution",
+      "sdkVersion": "0.3.0",
+      "cerFamily": "cer.governed.execution.step.v1",
+      "cerVersion": "1"
+    },
+    "baseline": {
+      "runId": "22d4f484-4447-4dd5-923b-0a0df6e74995",
+      "scenarioCount": 5,
+      "expectedCerCount": 38,
+      "actualCerCount": 38,
+      "uniqueCertificateHashes": 38,
+      "scenarios": [
+        {
+          "name": "happy-path",
+          "bundleId": "109b33b3-a485-47e9-a78d-9549ea52cead",
+          "stepCount": 4,
+          "status": "PASS"
+        },
+        {
+          "name": "cbf-block",
+          "bundleId": "c55850e6-6a33-4d50-9b0b-c5ed6a7d2566",
+          "stepCount": 3,
+          "status": "PASS"
+        },
+        {
+          "name": "loop-breaker",
+          "bundleId": "87492823-96df-4545-8312-f5eb5f491891",
+          "stepCount": 6,
+          "status": "PASS"
+        },
+        {
+          "name": "nemo-block",
+          "bundleId": "5c188771-8929-4dcc-9f05-eb7118b1ae81",
+          "stepCount": 3,
+          "status": "PASS"
+        },
+        {
+          "name": "branching-merging-dag",
+          "bundleId": "fec228f8-5259-47e9-9339-c9d137576898",
+          "stepCount": 22,
+          "status": "PASS"
+        }
+      ]
+    },
+    "checks": {
+      "allBaselineCersVerifiedBySdk": {
+        "expected": 38,
+        "verified": 38,
+        "status": "PASS"
+      },
+      "allBaselineCersVerifiedByNode": {
+        "expected": 38,
+        "verified": 38,
+        "status": "PASS"
+      },
+      "certificateHashesUnique": {
+        "expected": 38,
+        "actual": 38,
+        "status": "PASS"
+      },
+      "parentStepReferencesPreserved": {
+        "status": "PASS"
+      },
+      "executedGraphsAcyclic": {
+        "status": "PASS"
+      },
+      "hiddenRecordNotPubliclyResolvable": {
+        "httpStatus": 404,
+        "status": "PASS"
+      },
+      "hiddenAndUnknownPublicResponsesEquivalent": {
+        "sameHttpStatus": true,
+        "sameErrorCode": true,
+        "sameErrorMessage": true,
+        "status": "PASS"
+      }
+    },
+    "publicReference": {
+      "certificateHash": "sha256:06ecaef10f7da96162f9290b3a863acede905cfe80a15bf35b8f9025c1dca6b8",
+      "stepId": "e56037c9-52a7-4c86-9e1a-2ef4ac8a67b0",
+      "nodeName": "intake",
+      "resolver": {
+        "httpStatus": 200,
+        "status": "PASS"
+      },
+      "publicCerEndpoint": {
+        "httpStatus": 200,
+        "status": "PASS"
+      },
+      "publicProofEndpoint": {
+        "httpStatus": 200,
+        "status": "PASS"
+      },
+      "canonicalCertificateHashVerification": {
+        "status": "PASS"
+      },
+      "ed25519EnvelopeVerification": {
+        "status": "PASS"
+      }
+    },
+    "claimBoundary": {
+      "certificateIntegrity": "validated",
+      "nodeAttestationAuthenticity": "validated",
+      "executedParentRelationships": "validated",
+      "executionTruth": "not claimed",
+      "stateHashPreimage": "not independently verified",
+      "producerCompleteness": "not claimed",
+      "policyCorrectness": "not claimed",
+      "safety": "not claimed",
+      "legalCompliance": "not claimed"
+    }
+  }

@@ -1,0 +1,72 @@
+{
+  "stage": "07-replay-and-mutation-protection",
+  "status": "PASS",
+  "generatedAt": "2026-09-17T12:28:33.558944Z",
+  "baseline": {
+    "governedExecutionSdk": "0.4.0",
+    "canonicalNode": "0.29.0",
+    "schema": "urn:cage:governance:v1:attestation-bundle"
+  },
+  "bundleId": "70000000-0000-4000-8000-000000000001",
+  "production": {
+    "authorizedPostRequests": 3,
+    "executedPostRequests": 3,
+    "freshRegistrationHttpStatus": 201,
+    "exactReplayHttpStatus": 200,
+    "mutationHttpStatus": 409,
+    "persistedBundleCount": 1,
+    "persistedStepCount": 4,
+    "verifiedCerCount": 4,
+    "uniqueCertificateHashes": 4
+  },
+  "replay": {
+    "replayed": true,
+    "certificateHashesUnchanged": true,
+    "cerContentUnchanged": true,
+    "differentIdempotencyHeader": true,
+    "newCerSetCreated": false
+  },
+  "mutation": {
+    "field": "bundle.steps[3].stateHash",
+    "originalValue": "d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3",
+    "submittedMutatedValue": "a4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3",
+    "httpStatus": 409,
+    "error": "EXECUTION_MUTATION_DETECTED",
+    "reasonCode": "EXECUTION_MUTATION_DETECTED",
+    "mutatedValuePersisted": false
+  },
+  "certificateHashes": [
+    "sha256:6350c46b112ad6d733a0cffe609c62f8561ba78bce3d9cf19d455b05494c360d",
+    "sha256:1689b8a6258541a936ab4bbc19449e034bbc43cf2782e146ee4f77022a06502f",
+    "sha256:910230aa14a49a011c7c4584115af8b556ae6fa154de6d201c189d18c07f584d",
+    "sha256:906013449d175d86009d274d2df274e884d8245ea8e0c071b52d73526f3bc6f6"
+  ],
+  "persistedStateHashes": [
+    "a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890",
+    "b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1",
+    "c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2",
+    "d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3"
+  ],
+  "fixtureHashes": {
+    "original": "7ccf3edc0030166aa4fd639650c36fb941b176ffe6ab2ea3ace6ad0992943762",
+    "mutated": "1e7fbdd4000c916e1b9adc4237511189020316e29b9e1d5653656b34d67a5f1e"
+  },
+  "sourceFixture": {
+    "sha256": "9becff1257874754d73ae3585808bff63657e19e9232ec44d516677c779c2440"
+  },
+  "semanticResults": {
+    "freshRegistration": "PASS",
+    "exactReplay": "PASS",
+    "replayPreservedCertificateHashes": "PASS",
+    "replayPreservedCerContent": "PASS",
+    "sameIdentityMutationRejected": "PASS",
+    "mutationPreservedOriginalEvidence": "PASS",
+    "idempotencyHeaderIndependentOfIdentity": "PASS"
+  },
+  "claimBoundary": {
+    "stateHash": "treated as producer-supplied opaque commitment; private preimage not verified",
+    "mutationProtection": "protects canonical persisted execution evidence from conflicting re-registration",
+    "cageProducerAuthentication": "not claimed",
+    "executionTruth": "not claimed"
+  }
+}

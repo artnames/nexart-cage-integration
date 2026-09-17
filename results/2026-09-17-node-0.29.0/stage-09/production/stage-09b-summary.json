@@ -1,0 +1,108 @@
+{
+  "stage": "09b-production-real-google-cage-adapter",
+  "generatedAt": "2026-09-17T13:15:21.594Z",
+  "baseline": {
+    "upstreamRepository": "google/cybernetic-agent-governance-engine",
+    "upstreamCommit": "8162958ac23d958871fd4016f349a7062627fd4d",
+    "upstreamAdapter": "src/integrations/provider_02/adapter.py",
+    "governedExecutionSdk": "0.4.0",
+    "canonicalNode": "0.29.0"
+  },
+  "authorization": {
+    "authorizedPostCount": 1,
+    "executedPostCount": 1,
+    "bundleId": "613702d8-fdc0-40bc-9723-c21111c216db",
+    "fixtureSha256": "698bcaf82901c9b33676d88433cc72dbbdb0f2578efa8fa9ef802a25a6904bd9"
+  },
+  "sourceEvidence": {
+    "generatedBy": "pinned Google CAGE provider_02 adapter",
+    "handAuthoredByNexArt": false,
+    "fixtureSha256": "698bcaf82901c9b33676d88433cc72dbbdb0f2578efa8fa9ef802a25a6904bd9",
+    "threadId": "stage09-real-adapter-cbf",
+    "terminalPath": "cbf_block",
+    "stepCount": 4,
+    "nodeNames": [
+      "nemo_guardrail",
+      "evaluator",
+      "safety_check",
+      "explainer"
+    ]
+  },
+  "production": {
+    "preflightHttpStatus": 404,
+    "submissionHttpStatus": 201,
+    "replayed": false,
+    "persistedBundleReadHttpStatus": 200,
+    "persistedStepsReadHttpStatus": 200,
+    "persistedStepCount": 4,
+    "verifiedCerCount": 4,
+    "uniqueCertificateHashes": 4,
+    "certificateHashes": [
+      "sha256:d805dc61e9fa6efe3f637695bacaf15b5ab3729d6325138a840e2249cb0ee1de",
+      "sha256:8e290d2d4e4c872205696391a19cbb8ffdabbe7b786b3b9dbee76cb670cd2436",
+      "sha256:392cf9929300429d3fa9843211b82019ee1facb39fb7e0bdeac05b3a6ed92ad5",
+      "sha256:fd78478d7d2a16a3403555599177f7a1d486ecb793c1c520f79503ef6cf95bb1"
+    ]
+  },
+  "steps": [
+    {
+      "ordinal": 0,
+      "stepId": "49ee19a3-443f-40ab-874f-6c67c012db41",
+      "nodeName": "nemo_guardrail",
+      "certificateHash": "sha256:d805dc61e9fa6efe3f637695bacaf15b5ab3729d6325138a840e2249cb0ee1de",
+      "stateHash": "a92d92900714e64ddd5fd29e299b4688197ccce50d15d35500d7c3ecdd5507da",
+      "stateHashVerification": "not-performed",
+      "status": "PASS"
+    },
+    {
+      "ordinal": 1,
+      "stepId": "9cf88f43-fe31-40f4-98c2-3144cca892bc",
+      "nodeName": "evaluator",
+      "certificateHash": "sha256:8e290d2d4e4c872205696391a19cbb8ffdabbe7b786b3b9dbee76cb670cd2436",
+      "stateHash": "dc4e11b72adeafad75f3d20c596d09d613c32c8bf399d792682670d84ea0b671",
+      "stateHashVerification": "not-performed",
+      "status": "PASS"
+    },
+    {
+      "ordinal": 2,
+      "stepId": "555cf5b8-cd51-42fd-af4c-4ee20694e087",
+      "nodeName": "safety_check",
+      "certificateHash": "sha256:392cf9929300429d3fa9843211b82019ee1facb39fb7e0bdeac05b3a6ed92ad5",
+      "stateHash": "1e13daa9366f6d12511561a27eefa06ec0aadc40267240e4599d5654564504b5",
+      "stateHashVerification": "not-performed",
+      "status": "PASS"
+    },
+    {
+      "ordinal": 3,
+      "stepId": "4997d45e-1068-451e-9e5c-48e9f00b2052",
+      "nodeName": "explainer",
+      "certificateHash": "sha256:fd78478d7d2a16a3403555599177f7a1d486ecb793c1c520f79503ef6cf95bb1",
+      "stateHash": "1e13daa9366f6d12511561a27eefa06ec0aadc40267240e4599d5654564504b5",
+      "stateHashVerification": "not-performed",
+      "status": "PASS"
+    }
+  ],
+  "semanticResults": {
+    "exactFrozenFixtureSubmitted": "PASS",
+    "realCageBundleAccepted": "PASS",
+    "cbfTerminalPathPreserved": "PASS",
+    "stepIdentityPreserved": "PASS",
+    "parentStepIdsPreserved": "PASS",
+    "signalsPreserved": "PASS",
+    "metadataPreserved": "PASS",
+    "stateHashPreserved": "PASS",
+    "cerVerification": "PASS"
+  },
+  "excludedFromProduction": {
+    "hitlFixture": true,
+    "reason": "Stage 09A confirmed upstream HITL evidence incompatibilities"
+  },
+  "claimBoundary": {
+    "integrationEvidence": "demonstrates interoperability of unchanged CAGE provider_02 CBF output with NexArt production ingestion",
+    "stateHash": "producer-generated opaque commitment preserved and certificate-bound; private preimage not independently verified",
+    "cageProducerAuthentication": "not claimed",
+    "executionTruth": "not claimed",
+    "policyCorrectness": "not claimed"
+  },
+  "status": "PASS"
+}

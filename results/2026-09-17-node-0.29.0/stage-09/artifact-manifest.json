@@ -1,0 +1,126 @@
+{
+  "algorithm": "sha256",
+  "artifactCount": 24,
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "3dbe1a6756fd0eed57f4bfdcdbd44c8a796a34b39b5d8b9f309763f22b35c4ae",
+      "bytes": 2830
+    },
+    {
+      "path": "diagnostic-hitl-statehash-syntax-repair.json",
+      "sha256": "2bd5a876652411708a20d62dd80559cf5306759ea8ead10e3608f6b6b7abdc92",
+      "bytes": 1130
+    },
+    {
+      "path": "fixtures/01_real_adapter_cbf_block.json",
+      "sha256": "698bcaf82901c9b33676d88433cc72dbbdb0f2578efa8fa9ef802a25a6904bd9",
+      "bytes": 5024
+    },
+    {
+      "path": "fixtures/02_real_adapter_hitl_probe.json",
+      "sha256": "70e15316a345601ed23d62f5b5b373ac873d25a96c4eb6ba98805c40ff250052",
+      "bytes": 6909
+    },
+    {
+      "path": "harnesses/stage-09a-generate-real-cage.py",
+      "sha256": "37b799eefdc643762a7f5de12c360a32d3c65dbcc009cdae9ac65b8de6e5c14d",
+      "bytes": 5522
+    },
+    {
+      "path": "harnesses/stage-09a-real-cage-adapter.mjs",
+      "sha256": "d7348af0413fc694c73ed0eb780ff5ef28670a682c2ce7258374d7f16824d5ee",
+      "bytes": 13091
+    },
+    {
+      "path": "harnesses/stage-09b-production-real-cage.mjs",
+      "sha256": "34737bfee5d62d7c85d5b3238d1b8aff7d34aebb8c10f20cb81dfbe0ca7d9b6d",
+      "bytes": 16023
+    },
+    {
+      "path": "production/00-local-validation.json",
+      "sha256": "00f5b63c788e6f7f25bd7c16d90081c80b0dd045ff9cc2bf5ff0ff0dac323be2",
+      "bytes": 130
+    },
+    {
+      "path": "production/01-preflight-headers.json",
+      "sha256": "050c9e6426bd8f288b87ec482f5328884f2f9b3115f96d200f432d285205bcde",
+      "bytes": 866
+    },
+    {
+      "path": "production/01-preflight.json",
+      "sha256": "9af1b3a4b51afce5e9a3bd3c6a8c2ecfe42cf62f4ffdbaf45b29befd8f5cde7b",
+      "bytes": 65
+    },
+    {
+      "path": "production/01-preflight.raw.json",
+      "sha256": "42bc264ee313fcdf0b05ed46b65ca440c0fb845719391775c40d5f012c8890a9",
+      "bytes": 55
+    },
+    {
+      "path": "production/02-submission-headers.json",
+      "sha256": "bf4accd40a3de49af36f403150ac45e37bfbf52d4ef00cf38032eb1ec4fdd6ae",
+      "bytes": 978
+    },
+    {
+      "path": "production/02-submission.json",
+      "sha256": "3a92b6b75cf4485c4c3e0a595f852bd10f2414c4e66f1f9306d308dfec4313e7",
+      "bytes": 8738
+    },
+    {
+      "path": "production/02-submission.raw.json",
+      "sha256": "3068e0172c43aa674d327ee747ad46057adeffc33b549621ec7f2de985cc2fd7",
+      "bytes": 6424
+    },
+    {
+      "path": "production/03-bundle-readback-headers.json",
+      "sha256": "6e75e1c89e81f827295409e3d3d2ee2c39723648c375be71e2ab097663eb0b3a",
+      "bytes": 885
+    },
+    {
+      "path": "production/03-bundle-readback.json",
+      "sha256": "9363cb2877493b91726d572bdcb744f3688987a73a52751ea2625416751958b9",
+      "bytes": 32808
+    },
+    {
+      "path": "production/03-bundle-readback.raw.json",
+      "sha256": "0cfacb0ea37f87196fad6c1901a9200dc752ea7f4876a54a805c41654899707e",
+      "bytes": 21364
+    },
+    {
+      "path": "production/04-steps-readback-headers.json",
+      "sha256": "f9fd30f42f47876924fa6f8b4a7c871d8ef5a326c35a86c9cf0f7d4427bb0024",
+      "bytes": 893
+    },
+    {
+      "path": "production/04-steps-readback.json",
+      "sha256": "d66b73e467b5c266b047b5312ba755125c312f8911d3b53408993b349130cf3e",
+      "bytes": 24654
+    },
+    {
+      "path": "production/04-steps-readback.raw.json",
+      "sha256": "ef254387f6e9b5c06ab8411d66e30b647dc6a4477d25944b6411b6a2bd7b96f8",
+      "bytes": 16657
+    },
+    {
+      "path": "production/stage-09b-summary.json",
+      "sha256": "0bc7e8b89231ac65d4a424c4bdc3bfa7a450f210364bc00f2750c0fe22c03ba5",
+      "bytes": 4144
+    },
+    {
+      "path": "stage-09-final-summary.json",
+      "sha256": "086a2b26f708cdd6c93e34efbc1dd7dc017db2613db6739f281c5f3feac57a7d",
+      "bytes": 3380
+    },
+    {
+      "path": "stage-09a-final-summary.json",
+      "sha256": "4c29fa51e95a402164a46a4198e149ad5585de9264b9fdf644078c0e64ceb07b",
+      "bytes": 3508
+    },
+    {
+      "path": "stage-09a-summary.json",
+      "sha256": "4c29fa51e95a402164a46a4198e149ad5585de9264b9fdf644078c0e64ceb07b",
+      "bytes": 3508
+    }
+  ]
+}

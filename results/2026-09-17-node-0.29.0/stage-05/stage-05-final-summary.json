@@ -1,0 +1,64 @@
+{
+  "stage": "05-terminal-path-semantics-and-precedence",
+  "status": "PASS",
+  "generatedAt": "2026-09-17T12:13:02.201526Z",
+  "baseline": {
+    "governedExecutionSdk": "0.4.0",
+    "canonicalNode": "0.29.0",
+    "schema": "urn:cage:governance:v1:attestation-bundle"
+  },
+  "localValidation": {
+    "caseCount": 8,
+    "status": "PASS",
+    "allCasesPassed": true
+  },
+  "productionValidation": {
+    "authorizedRequestCount": 4,
+    "persistedBundles": 3,
+    "rejectedRequests": 1,
+    "verifiedCerCount": 13,
+    "uniqueCertificateHashes": 13,
+    "status": "PASS"
+  },
+  "semanticResults": {
+    "happyPath": "PASS",
+    "cbfBlock": "PASS",
+    "loopBreaker": "PASS",
+    "nemoBlock": "PASS",
+    "terminalNodePrecedence": "PASS",
+    "cbfOverLoopPrecedence": "PASS",
+    "loopOverNemoPrecedence": "PASS",
+    "terminalPathMismatchRejected": "PASS",
+    "rejectedMismatchPersisted": false
+  },
+  "productionBundles": [
+    "50000000-0000-4000-8000-000000000002",
+    "50000000-0000-4000-8000-000000000006",
+    "50000000-0000-4000-8000-000000000007"
+  ],
+  "rejectedBundleIds": [
+    "50000000-0000-4000-8000-000000000008"
+  ],
+  "fixtureHashes": {
+    "02_terminal_wins_over_cbf.json": "0d3fb0712b43256dfcd2c3cdcb0c9c482762b6652d96b32fd9050223e3f0b575",
+    "06_cbf_wins_over_loop.json": "dab7d26e2f06213340090af14d49d884e37f8c7541cd357c213cd73216eb3f24",
+    "07_loop_wins_over_nemo.json": "d3c7a22c3bd27ac1a7fe4681ff1d27164e696f3ba2367f79ce3aadd8373cb608",
+    "08_terminal_path_mismatch.json": "cea2725e05917b2e29b3101677fb5c489dda57a6b6ff2f951d9621954b6d4387"
+  },
+  "harnessRecovery": {
+    "required": true,
+    "classification": "HARNESS_DEFECT",
+    "productionFailure": false,
+    "cause": "initial harness read persisted terminalPath from the response wrapper instead of response.bundle",
+    "originalSuccessfulRequestCount": 1,
+    "resumedRequestCount": 3,
+    "alreadyPersistedRequestReplayed": false
+  },
+  "claimBoundary": {
+    "terminalPathSemantics": "validated against supplied topology and captured execution evidence",
+    "stateHash": "preserved and certificate-bound; private preimage not verified",
+    "cageProducerAuthentication": "not claimed",
+    "executionTruth": "not claimed",
+    "policyCorrectness": "not claimed"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "error": "CAGE_VALIDATION_FAILED",
+  "reasonCode": "INVALID_UUID",
+  "message": "CAGE validation failed",
+  "issues": [
+    {
+      "code": "INVALID_UUID",
+      "path": "bundle.steps[3].stepId",
+      "message": "RFC 4122 UUID v4 required"
+    }
+  ],
+  "warnings": [],
+  "validation": {
+    "schemaErrors": [
+      {
+        "code": "INVALID_UUID",
+        "path": "bundle.steps[3].stepId",
+        "message": "RFC 4122 UUID v4 required"
+      }
+    ],
+    "causalErrors": [],
+    "topologyErrors": [],
+    "resourceErrors": [],
+    "warnings": [],
+    "valid": false
+  }
+}

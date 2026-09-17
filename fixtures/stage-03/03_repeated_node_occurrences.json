@@ -1,0 +1,75 @@
+{
+  "schema": "urn:cage:governance:v1:attestation-bundle",
+  "bundle": {
+    "bundleId": "30000000-0000-4000-8000-000000000003",
+    "threadId": "stage03-repeated-node-occurrences",
+    "startedAt": "2026-09-17T12:02:00.000Z",
+    "completedAt": "2026-09-17T12:02:04.000Z",
+    "terminalPath": "happy_path",
+    "steps": [
+      {
+        "stepId": "30000003-0000-4000-8000-000000000001",
+        "nodeName": "repeat",
+        "parentStepIds": [],
+        "timestampUtc": "2026-09-17T12:02:00.000Z",
+        "durationMs": 1,
+        "signals": {
+          "stage03": true,
+          "ordinal": 0
+        },
+        "metadata": {
+          "fixture": "stage-03"
+        },
+        "stateHash": "e1ecd41c08d0acb9fec92ea35ba7225cd554b34fcee9a6420c7a7945f8053ded"
+      },
+      {
+        "stepId": "30000003-0000-4000-8000-000000000002",
+        "nodeName": "repeat",
+        "parentStepIds": [
+          "30000003-0000-4000-8000-000000000001"
+        ],
+        "timestampUtc": "2026-09-17T12:02:01.000Z",
+        "durationMs": 2,
+        "signals": {
+          "stage03": true,
+          "ordinal": 1
+        },
+        "metadata": {
+          "fixture": "stage-03"
+        },
+        "stateHash": "2667b32a9b966431206aac54396a46ff0d01ea734127cf1a3a9ee90792c3ca52"
+      },
+      {
+        "stepId": "30000003-0000-4000-8000-000000000003",
+        "nodeName": "repeat",
+        "parentStepIds": [
+          "30000003-0000-4000-8000-000000000002"
+        ],
+        "timestampUtc": "2026-09-17T12:02:02.000Z",
+        "durationMs": 3,
+        "signals": {
+          "stage03": true,
+          "ordinal": 2
+        },
+        "metadata": {
+          "fixture": "stage-03"
+        },
+        "stateHash": "151705db338a383e9fa829e648082c00af0f9e8592d30774bcbe9ac3d74efbad"
+      }
+    ]
+  },
+  "topology": {
+    "nodes": [
+      "repeat"
+    ],
+    "parentEdges": {
+      "repeat": [
+        "repeat"
+      ]
+    },
+    "terminalNode": "repeat",
+    "attestationNodes": [
+      "repeat"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "stage": "07-production-replay-and-mutation-protection",
+  "generatedAt": "2026-09-17T12:25:56.344Z",
+  "baseline": {
+    "governedExecutionSdk": "0.4.0",
+    "canonicalNode": "0.29.0",
+    "schema": "urn:cage:governance:v1:attestation-bundle"
+  },
+  "productionWriteAuthorized": true,
+  "authorizedPostRequests": 3,
+  "executedPostRequests": 3,
+  "bundleId": "70000000-0000-4000-8000-000000000001",
+  "fixtureHashes": {
+    "original": "7ccf3edc0030166aa4fd639650c36fb941b176ffe6ab2ea3ace6ad0992943762",
+    "mutated": "1e7fbdd4000c916e1b9adc4237511189020316e29b9e1d5653656b34d67a5f1e"
+  },
+  "firstRegistration": {
+    "httpStatus": 201,
+    "replayed": false,
+    "recordCount": 4,
+    "status": "PASS"
+  },
+  "exactReplay": {
+    "httpStatus": 200,
+    "replayed": true,
+    "recordCount": 4,
+    "certificateHashesUnchanged": true,
+    "cerContentUnchanged": true,
+    "differentIdempotencyHeader": true,
+    "status": "PASS"
+  },
+  "mutationAttempt": {
+    "httpStatus": 409,
+    "error": "EXECUTION_MUTATION_DETECTED",
+    "reasonCode": "EXECUTION_MUTATION_DETECTED",
+    "mutationField": "bundle.steps[3].stateHash",
+    "originalValue": "d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3",
+    "submittedMutatedValue": "a4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3",
+    "mutatedValuePersisted": false,
+    "status": "PASS"
+  },
+  "finalPersistence": {
+    "uniqueBundleIdentityCountExpected": 1,
+    "persistedStepCount": 4,
+    "verifiedCerCount": 4,
+    "uniqueCertificateHashes": 4,
+    "certificateHashesUnchanged": true,
+    "cerContentUnchanged": true,
+    "originalStateHashPreserved": true
+  },
+  "conclusions": {
+    "exactReplay": "returned existing complete manifest without creating a new CER set",
+    "mutationProtection": "same CAGE identity with different canonical native content rejected",
+    "retryHeaderIdentity": "different X-Idempotency-Key values did not alter CAGE identity semantics"
+  },
+  "claimBoundary": {
+    "stateHash": "treated as producer-supplied opaque commitment; private preimage not verified",
+    "mutationProtection": "protects canonical persisted execution evidence from conflicting re-registration",
+    "cageProducerAuthentication": "not claimed",
+    "executionTruth": "not claimed"
+  },
+  "status": "PASS"
+}

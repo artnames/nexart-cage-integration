@@ -1,0 +1,235 @@
+{
+  "ok": true,
+  "schema": "urn:cage:governance:v1:attestation-bundle",
+  "bundleId": "613702d8-fdc0-40bc-9723-c21111c216db",
+  "threadId": "stage09-real-adapter-cbf",
+  "terminalPath": "cbf_block",
+  "topologyStatus": "valid",
+  "replayed": false,
+  "warnings": [],
+  "records": [
+    {
+      "stepId": "49ee19a3-443f-40ab-874f-6c67c012db41",
+      "parentStepIds": [],
+      "certificateHash": "sha256:d805dc61e9fa6efe3f637695bacaf15b5ab3729d6325138a840e2249cb0ee1de",
+      "attestationId": "24dc024e-9b8b-4055-bdab-0368ad030543",
+      "receipt": {
+        "nodeId": "nexart-node-prod-1",
+        "attestedAt": "2026-09-17T13:15:21.014Z",
+        "attestationId": "24dc024e-9b8b-4055-bdab-0368ad030543",
+        "attestorKeyId": "k1",
+        "timestampType": "node-issued",
+        "receiptVersion": "attestation.receipt.v1",
+        "certificateHash": "sha256:d805dc61e9fa6efe3f637695bacaf15b5ab3729d6325138a840e2249cb0ee1de",
+        "nodeRuntimeHash": "sha256:f42a0dd8336e8caa454dadeda81b3808777edd836f2061415527399a3d3732ac",
+        "protocolVersion": "1"
+      },
+      "signature": "_g7JLE943_skQqVlYrIclrVe-hOgFO-mM1J6Rvw1fObrtpHyF4OlRadp1in74NlXBlx91lZ4w8kQZ3RuohbACQ",
+      "verificationEnvelope": {
+        "kid": "k1",
+        "scope": "whitelist",
+        "algorithm": "Ed25519",
+        "attestation": {
+          "kid": "k1",
+          "attestedAt": "2026-09-17T13:15:21.014Z",
+          "attestationId": "24dc024e-9b8b-4055-bdab-0368ad030543",
+          "nodeRuntimeHash": "sha256:f42a0dd8336e8caa454dadeda81b3808777edd836f2061415527399a3d3732ac",
+          "protocolVersion": "1"
+        },
+        "specVersion": "v0.16.1",
+        "envelopeType": "nexart.verification.envelope.v2",
+        "signedFields": {
+          "bundle": [
+            "bundleType",
+            "version",
+            "schema",
+            "bundleId",
+            "threadId",
+            "step",
+            "protectedSet"
+          ],
+          "attestation": [
+            "attestationId",
+            "attestedAt",
+            "kid",
+            "nodeRuntimeHash",
+            "protocolVersion"
+          ]
+        },
+        "canonicalization": "jcs"
+      },
+      "verificationEnvelopeSignature": "_3olJHdHwkTjpwY7_tSkn7y0mEG-jsjqzCAQddQdXzthK1ZJPC6FOoqWmEK-wdP4lxFI7FeBglWncjUCons_Cg",
+      "timestamp": null,
+      "ordinal": 0
+    },
+    {
+      "stepId": "9cf88f43-fe31-40f4-98c2-3144cca892bc",
+      "parentStepIds": [
+        "49ee19a3-443f-40ab-874f-6c67c012db41"
+      ],
+      "certificateHash": "sha256:8e290d2d4e4c872205696391a19cbb8ffdabbe7b786b3b9dbee76cb670cd2436",
+      "attestationId": "d2260754-b6ec-44b9-ab5a-f72f84fddb45",
+      "receipt": {
+        "nodeId": "nexart-node-prod-1",
+        "attestedAt": "2026-09-17T13:15:21.015Z",
+        "attestationId": "d2260754-b6ec-44b9-ab5a-f72f84fddb45",
+        "attestorKeyId": "k1",
+        "timestampType": "node-issued",
+        "receiptVersion": "attestation.receipt.v1",
+        "certificateHash": "sha256:8e290d2d4e4c872205696391a19cbb8ffdabbe7b786b3b9dbee76cb670cd2436",
+        "nodeRuntimeHash": "sha256:f42a0dd8336e8caa454dadeda81b3808777edd836f2061415527399a3d3732ac",
+        "protocolVersion": "1"
+      },
+      "signature": "canO6ET8XYwQF4efdDNvHkwIegHIkuWKSw4tO5wn5BNQMVy9XS98ZDv2KdtA18-c1HxGuq_V3tJLtfRTL-iJBA",
+      "verificationEnvelope": {
+        "kid": "k1",
+        "scope": "whitelist",
+        "algorithm": "Ed25519",
+        "attestation": {
+          "kid": "k1",
+          "attestedAt": "2026-09-17T13:15:21.015Z",
+          "attestationId": "d2260754-b6ec-44b9-ab5a-f72f84fddb45",
+          "nodeRuntimeHash": "sha256:f42a0dd8336e8caa454dadeda81b3808777edd836f2061415527399a3d3732ac",
+          "protocolVersion": "1"
+        },
+        "specVersion": "v0.16.1",
+        "envelopeType": "nexart.verification.envelope.v2",
+        "signedFields": {
+          "bundle": [
+            "bundleType",
+            "version",
+            "schema",
+            "bundleId",
+            "threadId",
+            "step",
+            "protectedSet"
+          ],
+          "attestation": [
+            "attestationId",
+            "attestedAt",
+            "kid",
+            "nodeRuntimeHash",
+            "protocolVersion"
+          ]
+        },
+        "canonicalization": "jcs"
+      },
+      "verificationEnvelopeSignature": "vaJzbElFJSmMTX1Qkfi938LaA2_vRySZdcAiIdriIXhfqzxbrxL_yNa9dj5tnbm2p1gmRFzPVCMgpPOIbQs1DA",
+      "timestamp": null,
+      "ordinal": 1
+    },
+    {
+      "stepId": "555cf5b8-cd51-42fd-af4c-4ee20694e087",
+      "parentStepIds": [
+        "9cf88f43-fe31-40f4-98c2-3144cca892bc"
+      ],
+      "certificateHash": "sha256:392cf9929300429d3fa9843211b82019ee1facb39fb7e0bdeac05b3a6ed92ad5",
+      "attestationId": "1dc3023e-4b73-4820-9dd0-a110e90c7f56",
+      "receipt": {
+        "nodeId": "nexart-node-prod-1",
+        "attestedAt": "2026-09-17T13:15:21.016Z",
+        "attestationId": "1dc3023e-4b73-4820-9dd0-a110e90c7f56",
+        "attestorKeyId": "k1",
+        "timestampType": "node-issued",
+        "receiptVersion": "attestation.receipt.v1",
+        "certificateHash": "sha256:392cf9929300429d3fa9843211b82019ee1facb39fb7e0bdeac05b3a6ed92ad5",
+        "nodeRuntimeHash": "sha256:f42a0dd8336e8caa454dadeda81b3808777edd836f2061415527399a3d3732ac",
+        "protocolVersion": "1"
+      },
+      "signature": "si1SXwfLaJXc75ezUF4e1d8PRE430C2cXBA1EJ_grfJHnctYPji0VT85HT_0KvMpHxRUzrZHWpG1IZUF30zlCA",
+      "verificationEnvelope": {
+        "kid": "k1",
+        "scope": "whitelist",
+        "algorithm": "Ed25519",
+        "attestation": {
+          "kid": "k1",
+          "attestedAt": "2026-09-17T13:15:21.016Z",
+          "attestationId": "1dc3023e-4b73-4820-9dd0-a110e90c7f56",
+          "nodeRuntimeHash": "sha256:f42a0dd8336e8caa454dadeda81b3808777edd836f2061415527399a3d3732ac",
+          "protocolVersion": "1"
+        },
+        "specVersion": "v0.16.1",
+        "envelopeType": "nexart.verification.envelope.v2",
+        "signedFields": {
+          "bundle": [
+            "bundleType",
+            "version",
+            "schema",
+            "bundleId",
+            "threadId",
+            "step",
+            "protectedSet"
+          ],
+          "attestation": [
+            "attestationId",
+            "attestedAt",
+            "kid",
+            "nodeRuntimeHash",
+            "protocolVersion"
+          ]
+        },
+        "canonicalization": "jcs"
+      },
+      "verificationEnvelopeSignature": "4fLVerwcGAhnpBrouZhOby_Py8Sdpylw_4HQn_amMrYXkkQ_MPUPtbGK6ruXIKwVCdTFa-KkNp109nACwl0jDA",
+      "timestamp": null,
+      "ordinal": 2
+    },
+    {
+      "stepId": "4997d45e-1068-451e-9e5c-48e9f00b2052",
+      "parentStepIds": [
+        "555cf5b8-cd51-42fd-af4c-4ee20694e087",
+        "9cf88f43-fe31-40f4-98c2-3144cca892bc"
+      ],
+      "certificateHash": "sha256:fd78478d7d2a16a3403555599177f7a1d486ecb793c1c520f79503ef6cf95bb1",
+      "attestationId": "88016762-e692-4018-953a-3c88331c0192",
+      "receipt": {
+        "nodeId": "nexart-node-prod-1",
+        "attestedAt": "2026-09-17T13:15:21.016Z",
+        "attestationId": "88016762-e692-4018-953a-3c88331c0192",
+        "attestorKeyId": "k1",
+        "timestampType": "node-issued",
+        "receiptVersion": "attestation.receipt.v1",
+        "certificateHash": "sha256:fd78478d7d2a16a3403555599177f7a1d486ecb793c1c520f79503ef6cf95bb1",
+        "nodeRuntimeHash": "sha256:f42a0dd8336e8caa454dadeda81b3808777edd836f2061415527399a3d3732ac",
+        "protocolVersion": "1"
+      },
+      "signature": "DMnTRJ7DEhYABiNzgfHrMhWZON52GvbC7CE_aACn3g3jcSKy2M9CDyTTrEjOqk9-1DayjEu2htbi_zDmKjwcAQ",
+      "verificationEnvelope": {
+        "kid": "k1",
+        "scope": "whitelist",
+        "algorithm": "Ed25519",
+        "attestation": {
+          "kid": "k1",
+          "attestedAt": "2026-09-17T13:15:21.016Z",
+          "attestationId": "88016762-e692-4018-953a-3c88331c0192",
+          "nodeRuntimeHash": "sha256:f42a0dd8336e8caa454dadeda81b3808777edd836f2061415527399a3d3732ac",
+          "protocolVersion": "1"
+        },
+        "specVersion": "v0.16.1",
+        "envelopeType": "nexart.verification.envelope.v2",
+        "signedFields": {
+          "bundle": [
+            "bundleType",
+            "version",
+            "schema",
+            "bundleId",
+            "threadId",
+            "step",
+            "protectedSet"
+          ],
+          "attestation": [
+            "attestationId",
+            "attestedAt",
+            "kid",
+            "nodeRuntimeHash",
+            "protocolVersion"
+          ]
+        },
+        "canonicalization": "jcs"
+      },
+      "verificationEnvelopeSignature": "O6SJImRNaFA4vaL8nP8TagTbNy6kxagpHHBhcV9HFr0TRjqR4lCWyErz07qFTfOiysij69byvzZGwCZRhy-jDQ",
+      "timestamp": null,
+      "ordinal": 3
+    }
+  ]
+}

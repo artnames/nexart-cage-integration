@@ -1,0 +1,27 @@
+{
+  "error": "CAGE_VALIDATION_FAILED",
+  "reasonCode": "TERMINAL_PATH_MISMATCH",
+  "message": "CAGE execution validation failed",
+  "issues": [
+    {
+      "code": "TERMINAL_PATH_MISMATCH",
+      "path": "bundle.terminalPath",
+      "message": "submitted terminal path happy_path does not match derived terminal path cbf_block"
+    }
+  ],
+  "warnings": [],
+  "validation": {
+    "schemaErrors": [],
+    "causalErrors": [],
+    "topologyErrors": [
+      {
+        "code": "TERMINAL_PATH_MISMATCH",
+        "path": "bundle.terminalPath",
+        "message": "submitted terminal path happy_path does not match derived terminal path cbf_block"
+      }
+    ],
+    "resourceErrors": [],
+    "warnings": [],
+    "valid": false
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "schema": "urn:cage:governance:v1:attestation-bundle",
+  "bundle": {
+    "bundleId": "331e2959-f9eb-4b8d-8f88-cbd889cc8b6c",
+    "threadId": "stage09-real-adapter-hitl",
+    "steps": [
+      {
+        "stepId": "01246cab-ace0-4c2c-b749-f86e0ddf150d",
+        "nodeName": "nemo_guardrail",
+        "parentStepIds": [],
+        "timestampUtc": "2026-09-17T12:50:33.848229+00:00",
+        "durationMs": 0.011249911040067673,
+        "signals": {
+          "safetyStatus": "APPROVED",
+          "riskStatus": "UNKNOWN",
+          "loopCount": 0
+        },
+        "metadata": {
+          "loopIteration": 0,
+          "threadId": "stage09-real-adapter-hitl"
+        },
+        "stateHash": "a92d92900714e64ddd5fd29e299b4688197ccce50d15d35500d7c3ecdd5507da"
+      },
+      {
+        "stepId": "20c2e6f2-2c5d-4162-8405-0a33a63b64ac",
+        "nodeName": "evaluator",
+        "parentStepIds": [
+          "01246cab-ace0-4c2c-b749-f86e0ddf150d"
+        ],
+        "timestampUtc": "2026-09-17T12:50:33.848296+00:00",
+        "durationMs": 0.0009579816833138466,
+        "signals": {
+          "governanceSignature": "stage09-approved",
+          "evaluationVerdict": "APPROVED",
+          "evaluationReasoning": "Stage 09 adapter compatibility fixture",
+          "policyCheck": "PASSED",
+          "policyResults": {
+            "allow": true,
+            "violations": []
+          },
+          "safetyStatus": "APPROVED",
+          "riskStatus": "APPROVED",
+          "loopCount": 0
+        },
+        "metadata": {
+          "loopIteration": 0,
+          "threadId": "stage09-real-adapter-hitl"
+        },
+        "stateHash": "dc4e11b72adeafad75f3d20c596d09d613c32c8bf399d792682670d84ea0b671"
+      },
+      {
+        "stepId": "51d8b4ee-2aa0-4b25-a574-6dd0bb0c9531",
+        "nodeName": "safety_check",
+        "parentStepIds": [
+          "20c2e6f2-2c5d-4162-8405-0a33a63b64ac"
+        ],
+        "timestampUtc": "2026-09-17T12:50:33.848342+00:00",
+        "durationMs": 0.0009170034900307655,
+        "signals": {
+          "governanceSignature": "stage09-approved",
+          "evaluationVerdict": "APPROVED",
+          "evaluationReasoning": "Stage 09 adapter compatibility fixture",
+          "policyCheck": "PASSED",
+          "policyResults": {
+            "allow": true,
+            "violations": []
+          },
+          "safetyStatus": "APPROVED",
+          "riskStatus": "APPROVED",
+          "loopCount": 0
+        },
+        "metadata": {
+          "loopIteration": 0,
+          "threadId": "stage09-real-adapter-hitl"
+        },
+        "stateHash": "dc4e11b72adeafad75f3d20c596d09d613c32c8bf399d792682670d84ea0b671"
+      },
+      {
+        "stepId": "c565f171-0adf-4dc0-9bbf-03ae80592b47",
+        "nodeName": "hitl_interrupt",
+        "parentStepIds": [
+          "51d8b4ee-2aa0-4b25-a574-6dd0bb0c9531"
+        ],
+        "timestampUtc": "2026-09-17T12:50:33.848352+00:00",
+        "durationMs": 0.0,
+        "signals": {
+          "hitlApproval": {
+            "approved": true,
+            "reviewer": "stage09-reviewer",
+            "rationale": "Stage 09 HITL probe",
+            "timestamp": "2026-09-17T12:00:00Z"
+          },
+          "interruptType": "HITL_MANUAL_REVIEW",
+          "approvalRequired": true
+        },
+        "metadata": {
+          "threadId": "stage09-real-adapter-hitl",
+          "interruptNode": "governed_trader"
+        },
+        "stateHash": ""
+      },
+      {
+        "stepId": "f375fa3a-a07d-4316-859d-6d17e3d5a597",
+        "nodeName": "governed_trader",
+        "parentStepIds": [
+          "51d8b4ee-2aa0-4b25-a574-6dd0bb0c9531"
+        ],
+        "timestampUtc": "2026-09-17T12:50:33.848541+00:00",
+        "durationMs": 0.0010420335456728935,
+        "signals": {
+          "governanceSignature": "stage09-approved",
+          "evaluationVerdict": "APPROVED",
+          "evaluationReasoning": "Stage 09 adapter compatibility fixture",
+          "policyCheck": "PASSED",
+          "policyResults": {
+            "allow": true,
+            "violations": []
+          },
+          "safetyStatus": "APPROVED",
+          "riskStatus": "APPROVED",
+          "hitlApproval": {
+            "approved": true,
+            "reviewer": "stage09-reviewer",
+            "rationale": "Stage 09 HITL probe",
+            "timestamp": "2026-09-17T12:00:00Z"
+          },
+          "loopCount": 0
+        },
+        "metadata": {
+          "loopIteration": 0,
+          "threadId": "stage09-real-adapter-hitl"
+        },
+        "stateHash": "db48ba4541e193aec1c35fefb42abbf3508cf1b65d2eb6a24e2750a95b87b2fb"
+      },
+      {
+        "stepId": "2d54f06e-6aca-4109-8b09-02715b4d7f1a",
+        "nodeName": "explainer",
+        "parentStepIds": [
+          "f375fa3a-a07d-4316-859d-6d17e3d5a597",
+          "20c2e6f2-2c5d-4162-8405-0a33a63b64ac",
+          "51d8b4ee-2aa0-4b25-a574-6dd0bb0c9531"
+        ],
+        "timestampUtc": "2026-09-17T12:50:33.848588+00:00",
+        "durationMs": 0.0008749775588512421,
+        "signals": {
+          "governanceSignature": "stage09-approved",
+          "evaluationVerdict": "APPROVED",
+          "evaluationReasoning": "Stage 09 adapter compatibility fixture",
+          "policyCheck": "PASSED",
+          "policyResults": {
+            "allow": true,
+            "violations": []
+          },
+          "safetyStatus": "APPROVED",
+          "riskStatus": "APPROVED",
+          "loopCount": 0
+        },
+        "metadata": {
+          "loopIteration": 0,
+          "threadId": "stage09-real-adapter-hitl"
+        },
+        "stateHash": "dc4e11b72adeafad75f3d20c596d09d613c32c8bf399d792682670d84ea0b671"
+      }
+    ],
+    "startedAt": "2026-09-17T12:50:33.848162+00:00",
+    "completedAt": "2026-09-17T12:50:33.848633+00:00",
+    "terminalPath": "unknown"
+  },
+  "topology": {
+    "nodes": [
+      "data_analyst",
+      "doer_node",
+      "evaluator",
+      "execution_analyst",
+      "explainer",
+      "governed_trader",
+      "nemo_guardrail",
+      "nemo_output_rail",
+      "safety_check",
+      "thinker_node"
+    ],
+    "parentEdges": {
+      "nemo_guardrail": [],
+      "thinker_node": [
+        "nemo_guardrail"
+      ],
+      "doer_node": [
+        "thinker_node"
+      ],
+      "data_analyst": [
+        "doer_node"
+      ],
+      "execution_analyst": [
+        "doer_node",
+        "evaluator"
+      ],
+      "evaluator": [
+        "execution_analyst"
+      ],
+      "safety_check": [
+        "evaluator"
+      ],
+      "governed_trader": [
+        "safety_check"
+      ],
+      "explainer": [
+        "governed_trader",
+        "evaluator",
+        "safety_check"
+      ],
+      "nemo_output_rail": [
+        "data_analyst",
+        "explainer"
+      ]
+    },
+    "terminalNode": "governed_trader",
+    "interruptNode": "governed_trader",
+    "attestationNodes": [
+      "evaluator",
+      "explainer",
+      "governed_trader",
+      "nemo_guardrail",
+      "nemo_output_rail",
+      "safety_check"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "stage": "02-canonical-cage-production-conformance",
+  "status": "PASS",
+  "generatedAt": "2026-09-17T11:32:17.674039Z",
+  "baseline": {
+    "cageRepository": "google/cybernetic-agent-governance-engine",
+    "cageCommit": "8162958ac23d958871fd4016f349a7062627fd4d",
+    "governedExecutionSdk": "0.4.0",
+    "canonicalNode": "0.29.0",
+    "schema": "urn:cage:governance:v1:attestation-bundle"
+  },
+  "fixtureValidation": {
+    "fixtureCount": 5,
+    "sourceHashesPinned": true,
+    "sourceHashesMatched": true,
+    "sdk040Validation": "PASS"
+  },
+  "productionIngestion": {
+    "authorized": true,
+    "fixtureCount": 5,
+    "expectedCerCount": 38,
+    "allHttp201": true,
+    "allResponseOk": true,
+    "allExpectedRecordCountsReturned": true,
+    "allBundlesPersisted": true,
+    "allStepCollectionsPersisted": true
+  },
+  "independentReadBackVerification": {
+    "productionWritesPerformed": false,
+    "fixtureCount": 5,
+    "expectedCerCount": 38,
+    "verifiedCerCount": 38,
+    "uniqueCertificateHashes": 38,
+    "sdkVerification": "PASS",
+    "identityPreservation": {
+      "stepId": "PASS",
+      "nodeName": "PASS",
+      "parentStepIds": "PASS",
+      "stateHash": "PASS"
+    }
+  },
+  "harnessFinding": {
+    "stage02bReportedStatus": "FAIL",
+    "classification": "HARNESS_DEFECT",
+    "productionFailure": false,
+    "cause": "Stage 02B expected CER at body.records[i].cer. The production registration response is an issuance manifest; persisted CERs are retrieved through authenticated step read-back at row.proof.proofJson.",
+    "resolution": "Stage 02C retrieved all persisted steps and independently verified all 38 CERs with governed-execution SDK 0.4.0."
+  },
+  "claimBoundary": {
+    "certificateIntegrity": "independently verified with SDK 0.4.0",
+    "nodePersistence": "validated through authenticated read-back",
+    "stateHash": "preserved and certificate-bound; private preimage not verified",
+    "cageProducerAuthentication": "not claimed",
+    "executionTruth": "not claimed",
+    "policyCorrectness": "not claimed"
+  }
+}

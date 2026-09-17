@@ -1,0 +1,92 @@
+{
+  "stage": "04b-production-static-vs-concrete-cycle-boundary",
+  "generatedAt": "2026-09-17T11:50:04.097Z",
+  "baseline": {
+    "governedExecutionSdk": "0.4.0",
+    "canonicalNode": "0.29.0",
+    "schema": "urn:cage:governance:v1:attestation-bundle"
+  },
+  "productionWriteAuthorized": true,
+  "requestCount": 4,
+  "positiveCaseCount": 2,
+  "negativeCaseCount": 2,
+  "persistedProductionBundles": 2,
+  "expectedPersistedProductionBundles": 2,
+  "verifiedCerCount": 8,
+  "expectedVerifiedCerCount": 8,
+  "uniqueCertificateHashes": 8,
+  "expectedUniqueCertificateHashes": 8,
+  "positiveCases": [
+    {
+      "fixture": "01_static_self_edge_allowed.json",
+      "bundleId": "40000000-0000-4000-8000-000000000001",
+      "httpStatus": 201,
+      "issuanceRecordCount": 4,
+      "persistedStepCount": 4,
+      "verifiedCers": 4,
+      "status": "PASS"
+    },
+    {
+      "fixture": "02_static_mutual_cycle_allowed.json",
+      "bundleId": "40000000-0000-4000-8000-000000000002",
+      "httpStatus": 201,
+      "issuanceRecordCount": 4,
+      "persistedStepCount": 4,
+      "verifiedCers": 4,
+      "status": "PASS"
+    }
+  ],
+  "negativeCases": [
+    {
+      "fixture": "03_concrete_cycle_rejected.json",
+      "bundleId": "40000000-0000-4000-8000-000000000003",
+      "httpStatus": 422,
+      "error": "CAGE_VALIDATION_FAILED",
+      "reasonCode": "FUTURE_PARENT",
+      "issueCodes": [
+        "FUTURE_PARENT",
+        "TIMESTAMP_INVERSION",
+        "CAUSAL_CYCLE"
+      ],
+      "bundleReadAfterRejection": 404,
+      "stepsReadAfterRejection": 404,
+      "persisted": false,
+      "status": "PASS"
+    },
+    {
+      "fixture": "04_unresolvable_contraction_cycle_rejected.json",
+      "bundleId": "40000000-0000-4000-8000-000000000004",
+      "httpStatus": 422,
+      "error": "CAGE_VALIDATION_FAILED",
+      "reasonCode": "UNRESOLVABLE_CONTRACTION_CYCLE",
+      "issueCodes": [
+        "UNRESOLVABLE_CONTRACTION_CYCLE",
+        "ILLEGAL_EXECUTED_EDGE"
+      ],
+      "bundleReadAfterRejection": 404,
+      "stepsReadAfterRejection": 404,
+      "persisted": false,
+      "status": "PASS"
+    }
+  ],
+  "fixtureHashes": {
+    "01_static_self_edge_allowed.json": "b7a302039759ae3218afde134d336068db553497ace73394859078dcf537f1a6",
+    "02_static_mutual_cycle_allowed.json": "81554b1584ff1f93b21b309cda87171cf663e1747c50c9d83ae44b675b08c921",
+    "03_concrete_cycle_rejected.json": "0b3ba77c055af23687e5a940274eca5babdabcf67d67b06f4fc050fd7fda1422",
+    "04_unresolvable_contraction_cycle_rejected.json": "b0cabd09e95f01d93c436aae4accd7061476704908fc3e418d0034098e56ce6b"
+  },
+  "conclusions": {
+    "staticSelfEdge": "accepted and certified",
+    "staticMutualCycle": "accepted and certified",
+    "concreteCausalCycle": "rejected before persistence",
+    "unresolvableContractionCycle": "rejected before persistence"
+  },
+  "claimBoundary": {
+    "staticTopologyCycles": "may be valid topology declarations",
+    "concreteExecutionCycles": "fail closed",
+    "stateHash": "preserved and certificate-bound for accepted cases; private preimage not verified",
+    "cageProducerAuthentication": "not claimed",
+    "executionTruth": "not claimed"
+  },
+  "status": "PASS"
+}

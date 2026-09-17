@@ -1,0 +1,21 @@
+{
+  "algorithm": "sha256",
+  "artifactCount": 3,
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "be95dba73d75af718f608938f87ae1a022968e2785d9dd8d6bda17300fc1d591",
+      "bytes": 499
+    },
+    {
+      "path": "stage-10-final-summary.json",
+      "sha256": "444db686d89beec21d7c7a449b931487791ca8a2cfbdffdde0c9be9c7b47924b",
+      "bytes": 4310
+    },
+    {
+      "path": "stage-10a-audit.json",
+      "sha256": "afe217e6ffcffb2e89afc445d847e97bf74b8608cfd38ef306e907b78a95872d",
+      "bytes": 5146
+    }
+  ]
+}

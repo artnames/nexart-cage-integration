@@ -1,0 +1,8 @@
+{
+  "source": "google/cybernetic-agent-governance-engine",
+  "commit": "8162958ac23d958871fd4016f349a7062627fd4d",
+  "path": "tests/fixtures/provider_02_native",
+  "retrievedAt": "2026-09-17T11:11:41Z",
+  "fixtureCount": 5,
+  "expectedPurpose": "Canonical Provider 02 native schema conformance vectors"
+}

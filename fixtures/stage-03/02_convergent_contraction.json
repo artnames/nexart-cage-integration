@@ -1,0 +1,89 @@
+{
+  "schema": "urn:cage:governance:v1:attestation-bundle",
+  "bundle": {
+    "bundleId": "30000000-0000-4000-8000-000000000002",
+    "threadId": "stage03-convergent-contraction",
+    "startedAt": "2026-09-17T12:01:00.000Z",
+    "completedAt": "2026-09-17T12:01:04.000Z",
+    "terminalPath": "happy_path",
+    "steps": [
+      {
+        "stepId": "30000002-0000-4000-8000-000000000001",
+        "nodeName": "root_a",
+        "parentStepIds": [],
+        "timestampUtc": "2026-09-17T12:01:00.000Z",
+        "durationMs": 1,
+        "signals": {
+          "stage03": true,
+          "ordinal": 0
+        },
+        "metadata": {
+          "fixture": "stage-03"
+        },
+        "stateHash": "0eedcbe0db88be214c0fd84a97ace71a5b9b0fea670d57fc35d92f8a85337253"
+      },
+      {
+        "stepId": "30000002-0000-4000-8000-000000000002",
+        "nodeName": "root_b",
+        "parentStepIds": [],
+        "timestampUtc": "2026-09-17T12:01:01.000Z",
+        "durationMs": 2,
+        "signals": {
+          "stage03": true,
+          "ordinal": 1
+        },
+        "metadata": {
+          "fixture": "stage-03"
+        },
+        "stateHash": "c40ae1b01dd4b5bc777d322b559105910cae810b45846b9fd5b06154b40f62c2"
+      },
+      {
+        "stepId": "30000002-0000-4000-8000-000000000003",
+        "nodeName": "join",
+        "parentStepIds": [
+          "30000002-0000-4000-8000-000000000001",
+          "30000002-0000-4000-8000-000000000002"
+        ],
+        "timestampUtc": "2026-09-17T12:01:02.000Z",
+        "durationMs": 3,
+        "signals": {
+          "stage03": true,
+          "ordinal": 2
+        },
+        "metadata": {
+          "fixture": "stage-03"
+        },
+        "stateHash": "357cfdd57dee728d8a1080e6b884f7088e2f177a33dbdc77875eb80b20624cac"
+      }
+    ]
+  },
+  "topology": {
+    "nodes": [
+      "root_a",
+      "root_b",
+      "hidden_a",
+      "hidden_b",
+      "join"
+    ],
+    "parentEdges": {
+      "root_a": [],
+      "root_b": [],
+      "hidden_a": [
+        "root_a"
+      ],
+      "hidden_b": [
+        "root_b"
+      ],
+      "join": [
+        "hidden_a",
+        "hidden_b"
+      ]
+    },
+    "terminalNode": "join",
+    "attestationNodes": [
+      "root_a",
+      "root_b",
+      "join"
+    ]
+  }
+}
