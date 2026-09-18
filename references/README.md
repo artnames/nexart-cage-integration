@@ -16,20 +16,32 @@ Native schema handoff design:
 plans/provider_02_native_schema_handoff.md
 ```
 
-Pinned upstream commit used during the NexArt integration work:
+Historical native-schema handoff design reference:
 
 ```text
 eb828d9deeb39d774959fdc5560798e463a50518
 ```
 
-The integration described in this repository was implemented against the native CAGE handoff model associated with that commit.
+Current validated upstream CAGE baseline:
+
+```text
+fcb98bef0b5faea1afcc5a430148fe065b985ef4
+```
+
+HITL remediation commit included in that baseline:
+
+```text
+a0fec6667f4cb21b87f22f2d22a9281064a5fa12
+```
+
+The historical commit identifies the native-schema handoff design used during the original integration work. The current commit identifies the CAGE revision validated by the Stage 11 HITL interoperability evidence.
 
 ## NexArt SDK
 
 Package:
 
 ```text
-@nexart/governed-execution@0.3.0
+@nexart/governed-execution@0.4.1
 ```
 
 Native CAGE helpers are exposed through:

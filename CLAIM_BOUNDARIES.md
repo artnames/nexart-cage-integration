@@ -152,3 +152,30 @@ Observability data may contribute evidence.
 
 Observability itself is not equivalent to independently verifiable
 execution evidence.
+
+## Stage 11 HITL validation does not expand claims
+
+The successful Stage 11 CAGE HITL validation does not expand NexArt claims beyond the established evidence boundary.
+
+It demonstrates:
+
+- interoperability of the captured current CAGE `provider_02` HITL evidence with NexArt;
+- deterministic CER construction;
+- preservation of concrete execution evidence;
+- cryptographic integrity of the resulting CERs;
+- Node attestation under Ed25519 key `k1`;
+- independent verification of the persisted CERs and Node signatures.
+
+It does not establish:
+
+- truthfulness of the underlying execution;
+- independent verification of the private CAGE AgentState preimage;
+- CAGE producer authentication;
+- completeness of every possible topology edge;
+- policy correctness;
+- system safety;
+- legal or regulatory compliance.
+
+`stateHash` remains a producer-supplied opaque commitment. NexArt preserves and certificate-binds it, while `stateHashVerification` remains `not-performed`.
+
+Static `parentEdges` represents possible legal parent relationships. Acceptance of a concrete `parentStepIds` subset must not be interpreted as proof of graph completeness.

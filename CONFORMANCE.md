@@ -1,5 +1,46 @@
 # NexArt ↔ Google CAGE Conformance Evidence
 
+## Current HITL remediation status
+
+The earlier Stage 09 HITL findings in this document are retained as historical evidence for the previously tested CAGE baseline.
+
+Those findings are resolved for the currently validated integration path.
+
+Current validated baseline:
+
+- Google CAGE: `fcb98bef0b5faea1afcc5a430148fe065b985ef4`
+- CAGE HITL remediation: `a0fec6667f4cb21b87f22f2d22a9281064a5fa12`
+- CAGE integration boundary: `provider_02`
+- `@nexart/governed-execution`: `0.4.1`
+- Canonical Node: `0.29.1`
+
+Stage 11 validated the unchanged current CAGE HITL artifact through local SDK validation and the production NexArt Node.
+
+Production result:
+
+- source artifact SHA-256: `d372c22782ef230bfd20f72b77bc3e89262d0fdd2d5a82a92974fb6979de1f41`
+- bundleId: `8af0b64c-fd4c-4d04-8579-24cdc477aa5c`
+- terminalPath: `happy_path`
+- production submission: HTTP `201`
+- replayed: `false`
+- persisted CAGE steps: `6/6`
+- CER integrity verification: `6/6 PASS`
+- source-step preservation: `6/6 PASS`
+- Ed25519 receipt signatures: `6/6 PASS`
+- Ed25519 verification-envelope signatures: `6/6 PASS`
+- signing key: `k1`
+
+The concrete HITL causality validated in production is:
+
+`safety_check -> hitl_interrupt -> governed_trader`
+
+Static `GraphTopology.parentEdges` describes possible legal parent relationships. Concrete `parentStepIds` records the actual causal edges selected by the execution and may therefore be a subset of those legal candidates.
+
+Evidence:
+
+`results/2026-09-18-node-0.29.1/stage-11-hitl-production/`
+
+
 Status: **PASS**
 
 Evidence baseline: **17 September 2026**

@@ -31,7 +31,7 @@ The integration intentionally does not duplicate CAGE governance logic inside Ne
 ## Requirements
 
 - Node.js 20 or later
-- `@nexart/governed-execution@0.3.0`
+- `@nexart/governed-execution@0.4.1`
 - a NexArt API key for authenticated registration
 - a native CAGE `AttestationBundle`
 - optionally, a native CAGE `GraphTopology`
@@ -39,7 +39,7 @@ The integration intentionally does not duplicate CAGE governance logic inside Ne
 Install the SDK:
 
 ```bash
-npm install @nexart/governed-execution@0.3.0
+npm install @nexart/governed-execution@0.4.1
 ```
 
 Set credentials locally:

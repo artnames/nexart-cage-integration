@@ -165,3 +165,40 @@ Its purpose is to consolidate the frozen evidence into:
 - upstream compatibility findings
 - reproducibility instructions
 - repository-level evidence manifests
+
+## Stage 11 - Current CAGE HITL remediation validation
+
+Stage 11 validates the remediated current Google CAGE `provider_02` HITL path against `@nexart/governed-execution@0.4.1` and production Canonical Node `0.29.1`.
+
+| Evidence | Result |
+|---|---|
+| Current CAGE commit `fcb98bef0b5faea1afcc5a430148fe065b985ef4` | PASS |
+| HITL remediation commit `a0fec6667f4cb21b87f22f2d22a9281064a5fa12` | PASS |
+| Exact source artifact SHA-256 preserved | PASS |
+| HITL `stateHash` syntax accepted | PASS |
+| `hitl_interrupt` present in topology and attestation nodes | PASS |
+| `safety_check -> hitl_interrupt -> governed_trader` concrete causality | PASS |
+| Possible-parent subset semantics | PASS |
+| Local governed-execution `0.4.1` validation | PASS |
+| Production Node `0.29.1` submission | HTTP 201 |
+| New submission (`replayed=false`) | PASS |
+| Persisted steps | 6/6 |
+| Unique certificate hashes | 6/6 |
+| Local-to-production deterministic certificate hashes | PASS |
+| Source CAGE step preservation | 6/6 PASS |
+| CER integrity verification | 6/6 PASS |
+| Node receipt Ed25519 verification | 6/6 PASS |
+| Verification-envelope Ed25519 verification | 6/6 PASS |
+| Active signing key continuity (`k1`) | PASS |
+
+Evidence directory:
+
+`results/2026-09-18-node-0.29.1/stage-11-hitl-production/`
+
+Final summary:
+
+`results/2026-09-18-node-0.29.1/stage-11-hitl-production/stage-11-final-summary.json`
+
+Artifact manifest:
+
+`results/2026-09-18-node-0.29.1/stage-11-hitl-production/artifact-manifest.json`

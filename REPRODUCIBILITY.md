@@ -23,11 +23,13 @@ Stage 09 CAGE runtime:
 
 ## Dependency baseline
 
-Install dependencies with `npm ci`.
+The current repository dependency is `@nexart/governed-execution@0.4.1`.
+
+Install current dependencies with `npm ci`.
 
 Confirm the SDK pin with `npm ls @nexart/governed-execution`.
 
-Expected dependency: `@nexart/governed-execution@0.4.0`.
+The frozen Stage 01 through Stage 10 evidence under `results/2026-09-17-node-0.29.0/` was generated against `@nexart/governed-execution@0.4.0` and remains unchanged as historical evidence.
 
 ## Frozen evidence
 
@@ -100,3 +102,28 @@ Do not commit live NexArt credentials, private signing keys or environment files
 The final repository-level evidence manifest is:
 
 `results/2026-09-17-node-0.29.0/conformance-evidence-manifest.json`
+
+## Stage 11 current HITL remediation evidence
+
+Stage 11 is the current positive HITL interoperability evidence.
+
+Pinned inputs:
+
+- CAGE repository: `google/cybernetic-agent-governance-engine`
+- current validated commit: `fcb98bef0b5faea1afcc5a430148fe065b985ef4`
+- HITL remediation commit: `a0fec6667f4cb21b87f22f2d22a9281064a5fa12`
+- `@nexart/governed-execution`: `0.4.1`
+- Canonical Node: `0.29.1`
+- source artifact SHA-256: `d372c22782ef230bfd20f72b77bc3e89262d0fdd2d5a82a92974fb6979de1f41`
+
+Evidence:
+
+`results/2026-09-18-node-0.29.1/stage-11-hitl-production/`
+
+The single authorized Stage 11 production POST has already been consumed and returned HTTP `201`.
+
+Do not reproduce Stage 11 by submitting the bundle to production again.
+
+Ordinary reproduction should use the stored source artifact, production responses, readbacks, final summary and artifact manifest. Local CER verification and Ed25519 verification may be repeated without making any production write.
+
+Historical Stage 09 evidence remains intentionally unchanged and documents the behavior of the earlier CAGE / SDK / Node baseline.

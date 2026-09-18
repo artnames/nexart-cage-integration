@@ -361,7 +361,7 @@ Do not replace these with real customer data.
 The integration currently pins:
 
 ```text
-@nexart/governed-execution@0.3.0
+@nexart/governed-execution@0.4.1
 ```
 
 Do not automatically widen this to an unbounded range.
@@ -382,10 +382,22 @@ trust-boundary outputs
 
 ## Upstream compatibility
 
-The integration was built against the CAGE native-schema handoff design associated with upstream commit:
+The original integration design was built against the CAGE native-schema handoff design associated with:
 
 ```text
 eb828d9deeb39d774959fdc5560798e463a50518
+```
+
+The current validated upstream CAGE baseline is:
+
+```text
+fcb98bef0b5faea1afcc5a430148fe065b985ef4
+```
+
+and includes the HITL remediation from:
+
+```text
+a0fec6667f4cb21b87f22f2d22a9281064a5fa12
 ```
 
 Future upstream changes should not be assumed compatible automatically.

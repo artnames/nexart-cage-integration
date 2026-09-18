@@ -1,5 +1,45 @@
 # Upstream Google CAGE Compatibility Findings
 
+## Resolution status - 2026-09-18
+
+The HITL findings below are retained as the historical Stage 09 record for CAGE commit `8162958ac23d958871fd4016f349a7062627fd4d`.
+
+They are resolved for the currently validated upstream path.
+
+Google CAGE remediation commit:
+
+`a0fec6667f4cb21b87f22f2d22a9281064a5fa12`
+
+Current validated CAGE commit:
+
+`fcb98bef0b5faea1afcc5a430148fe065b985ef4`
+
+Resolution:
+
+1. `hitl_interrupt.stateHash` is now emitted as a 64-character lowercase SHA-256 digest over the CAGE RFC 8785 JCS-canonicalized state snapshot.
+2. `hitl_interrupt` is now formally included in `GraphTopology.nodes` and `attestationNodes`.
+3. Concrete HITL causal linkage is now `safety_check -> hitl_interrupt -> governed_trader`, with the resumed `governed_trader.parentStepIds` referencing the concrete `hitl_interrupt` step.
+
+A separate NexArt SDK compatibility issue was then identified: governed-execution `0.4.0` incorrectly treated all possible static topology parents as mandatory concrete parents.
+
+That behavior was corrected in `@nexart/governed-execution@0.4.1`.
+
+The exact current CAGE HITL artifact subsequently passed:
+
+- local SDK validation;
+- production Canonical Node `0.29.1` ingestion;
+- six-step persistence;
+- 6/6 CER integrity verification;
+- 6/6 Ed25519 receipt verification;
+- 6/6 Ed25519 verification-envelope verification.
+
+Stage 11 evidence:
+
+`results/2026-09-18-node-0.29.1/stage-11-hitl-production/`
+
+The original sections below should therefore be read as historical defect evidence, not as the current integration status.
+
+
 Tested repository:
 
 `google/cybernetic-agent-governance-engine`

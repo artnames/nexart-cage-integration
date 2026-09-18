@@ -1,0 +1,83 @@
+{
+  "stage": "11-production-hitl-remediation-validation",
+  "status": "PASS",
+  "baseline": {
+    "upstreamRepository": "google/cybernetic-agent-governance-engine",
+    "upstreamCommit": "fcb98bef0b5faea1afcc5a430148fe065b985ef4",
+    "hitlRemediationCommit": "a0fec6667f4cb21b87f22f2d22a9281064a5fa12",
+    "provider": "provider_02",
+    "governedExecutionSdk": "0.4.1",
+    "canonicalNode": "0.29.1",
+    "nodeBuild": "9c5ba2fc7b18725f6839d6b3f2ae0b7706e6a5a0"
+  },
+  "sourceEvidence": {
+    "artifactSha256": "d372c22782ef230bfd20f72b77bc3e89262d0fdd2d5a82a92974fb6979de1f41",
+    "bundleId": "8af0b64c-fd4c-4d04-8579-24cdc477aa5c",
+    "threadId": "stage09-real-adapter-hitl",
+    "terminalPath": "happy_path",
+    "stepCount": 6,
+    "nodeNames": [
+      "nemo_guardrail",
+      "evaluator",
+      "safety_check",
+      "hitl_interrupt",
+      "governed_trader",
+      "explainer"
+    ],
+    "hitlConcreteCausality": [
+      "safety_check",
+      "hitl_interrupt",
+      "governed_trader"
+    ]
+  },
+  "production": {
+    "preflightHttpStatus": 404,
+    "submissionHttpStatus": 201,
+    "authorizedPostCount": 1,
+    "executedPostCount": 1,
+    "replayed": false,
+    "bundleReadbackHttpStatus": 200,
+    "stepsReadbackHttpStatus": 200,
+    "persistedStepCount": 6,
+    "uniqueCertificateHashes": 6,
+    "certificateHashes": [
+      "sha256:2a49e1f16bedb302c3dd296276cc600cffccc8ee0090c75428faf49bf696155b",
+      "sha256:39d743685989801d77dce2afc3a4bf9d6b683ccb5efc8141a2e32abdfc65bc18",
+      "sha256:5ee11902af84fb7674735cae4bd77cc9aff2ef42fbe053cf45cf1f2ee463b35e",
+      "sha256:631995f5f43ded5e17289cb432b2aea719b2a46184ce1f5c50242e43b4746a5c",
+      "sha256:033d1515f7aa3962345c53ac5b646a47dda74d2f894a95d500725fe4b3e1cbdf",
+      "sha256:90e5e25493b59eaf955c4fd4fcf67b63c271438f0b17ce73e6e28e81ddaab02f"
+    ]
+  },
+  "verification": {
+    "cerIntegrity": "6/6 PASS",
+    "sourceStepPreservation": "6/6 PASS",
+    "receiptEd25519Signatures": "6/6 PASS",
+    "verificationEnvelopeEd25519Signatures": "6/6 PASS",
+    "signingKid": "k1",
+    "nodeId": "nexart-node-prod-1",
+    "keyContinuity": "PASS"
+  },
+  "semanticResults": {
+    "realCurrentCageHitlAccepted": "PASS",
+    "possibleParentSubsetSemantics": "PASS",
+    "hitlInterruptAccepted": "PASS",
+    "resumedGovernedTraderAccepted": "PASS",
+    "concreteParentStepIdsPreserved": "PASS",
+    "deterministicLocalToProductionCertificateHashes": "PASS",
+    "productionPersistence": "PASS",
+    "independentCryptographicVerification": "PASS"
+  },
+  "claimBoundary": {
+    "integrationEvidence": "demonstrates interoperability and cryptographic integrity of captured current CAGE provider_02 HITL execution evidence through NexArt governed-execution 0.4.1 and Node 0.29.1",
+    "stateHash": "producer-supplied opaque commitment preserved and certificate-bound",
+    "stateHashVerification": "not-performed",
+    "privateAgentStatePreimageVerified": false,
+    "cageProducerAuthenticationClaimed": false,
+    "executionTruthClaimed": false,
+    "graphCompletenessClaimed": false,
+    "policyCorrectnessClaimed": false,
+    "safetyClaimed": false,
+    "legalComplianceClaimed": false
+  }
+}

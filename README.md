@@ -70,7 +70,7 @@ version: "1"
 Validated SDK:
 
 ```text
-@nexart/governed-execution@0.3.0
+@nexart/governed-execution@0.4.1
 ```
 
 ## CER integrity model
@@ -272,10 +272,22 @@ google/cybernetic-agent-governance-engine
 plans/provider_02_native_schema_handoff.md
 ```
 
-Pinned upstream design commit used during integration:
+Historical native-schema design reference commit:
 
 ```text
 eb828d9deeb39d774959fdc5560798e463a50518
+```
+
+Current validated upstream CAGE commit:
+
+```text
+fcb98bef0b5faea1afcc5a430148fe065b985ef4
+```
+
+HITL remediation commit included in that validated baseline:
+
+```text
+a0fec6667f4cb21b87f22f2d22a9281064a5fa12
 ```
 
 This repository is maintained by NexArt and does not imply endorsement by Google or the upstream CAGE maintainers.

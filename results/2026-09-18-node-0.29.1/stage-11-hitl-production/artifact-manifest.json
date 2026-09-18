@@ -1,0 +1,52 @@
+{
+  "stage": 11,
+  "status": "PASS",
+  "baseDirectory": "results/2026-09-18-node-0.29.1/stage-11-hitl-production",
+  "artifacts": [
+    {
+      "path": "00-authorized-hitl-request.json",
+      "sha256": "d372c22782ef230bfd20f72b77bc3e89262d0fdd2d5a82a92974fb6979de1f41",
+      "bytes": 7107
+    },
+    {
+      "path": "01-preflight.json",
+      "sha256": "42bc264ee313fcdf0b05ed46b65ca440c0fb845719391775c40d5f012c8890a9",
+      "bytes": 55
+    },
+    {
+      "path": "02-submission.json",
+      "sha256": "bbfd14efa0c5faf35f68c0b554888cdc811cb860a2acb102989891fa4e656162",
+      "bytes": 9553
+    },
+    {
+      "path": "03-bundle-readback.json",
+      "sha256": "a90f3830a02d474282a4b90faeb5470f0d32da6be5ff7bb1be60fb0461cb4f29",
+      "bytes": 31623
+    },
+    {
+      "path": "04-steps-readback.json",
+      "sha256": "4ebb9bc06eeb0638cdc9ffdb775fe51236a4f8a36c52c1a4af71e495ebee15cf",
+      "bytes": 25137
+    },
+    {
+      "path": "05-node-version.json",
+      "sha256": "7e52531a5b237a1d58438af1079c5d5473f3a639d14a6839b9abc6149766d4a1",
+      "bytes": 354
+    },
+    {
+      "path": "06-node-discovery.json",
+      "sha256": "113c0fbd8547d512109c3a1671589577599bec9b16c9745627728a816add26b0",
+      "bytes": 541
+    },
+    {
+      "path": "07-independent-verification-summary.json",
+      "sha256": "478ada96113c74c9da732994452e74a1496906b08bd5c15c4c18958e0800863f",
+      "bytes": 1093
+    },
+    {
+      "path": "stage-11-final-summary.json",
+      "sha256": "4b1bb929683cfb5d379a4a95a3398616b21f89ac230fcbeaf12d8005ec7e6961",
+      "bytes": 3151
+    }
+  ]
+}

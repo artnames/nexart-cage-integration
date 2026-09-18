@@ -1,0 +1,42 @@
+{
+  "stage": "11-independent-production-verification",
+  "status": "PASS",
+  "governedExecutionSdk": "0.4.1",
+  "canonicalNode": "0.29.1",
+  "bundleId": "8af0b64c-fd4c-4d04-8579-24cdc477aa5c",
+  "threadId": "stage09-real-adapter-hitl",
+  "sourceArtifactSha256": "d372c22782ef230bfd20f72b77bc3e89262d0fdd2d5a82a92974fb6979de1f41",
+  "stepCount": 6,
+  "cerIntegrity": {
+    "verified": 6,
+    "total": 6,
+    "status": "PASS"
+  },
+  "sourceStepPreservation": {
+    "verified": 6,
+    "total": 6,
+    "status": "PASS"
+  },
+  "receiptEd25519Signatures": {
+    "verified": 6,
+    "total": 6,
+    "kid": "k1",
+    "status": "PASS"
+  },
+  "verificationEnvelopeEd25519Signatures": {
+    "verified": 6,
+    "total": 6,
+    "kid": "k1",
+    "status": "PASS"
+  },
+  "certificateHashesUnique": 6,
+  "claimBoundary": {
+    "stateHashVerification": "not-performed",
+    "privateAgentStatePreimageVerified": false,
+    "cageProducerAuthenticationClaimed": false,
+    "executionTruthClaimed": false,
+    "policyCorrectnessClaimed": false,
+    "safetyClaimed": false,
+    "legalComplianceClaimed": false
+  }
+}
